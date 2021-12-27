@@ -1,6 +1,9 @@
+import { logDOM } from "@testing-library/react";
 import React from "react";
 import { BsChevronRight, BsSearch } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5"
+import {VscMenu} from "react-icons/vsc"
+import {FaChevronDown} from "react-icons/fa"
 
 const NavSm = () => {
     return (
@@ -33,7 +36,18 @@ const NavMd = () => {
 const NavLg = () => {
     return (
         <>
-
+            <div className="h-20 flex items-center container mx-auto px-4 ">
+                <div className=" flex items-center w-full">
+                    <img className="bg-transparent h-12 pr-5" src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png" alt="logo" />
+                    <div className="text-gray-500 bg-white h-9 rounded-l border-0 flex items-center px-3"><IoSearchOutline className="w-4 h-4 border-0 bg-transparent" /></div>
+                    <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" className="w-4/5 h-9 rounded-r border-0  border-none focus:outline-none" />
+                </div>
+                <div className="flex items-center w-full gap-6 justify-end">
+                    <p className="text-white flex items-center gap-1">Rajamahendravaram (Rajahmundry) <FaChevronDown className="w-3 h-3"/></p>
+                    <button className="bg-red-500 text-white px-4 py-2  rounded-md text-xs font-semibold">Sign In</button>
+                    <VscMenu className="text-white w-5 h-5"/>
+                </div>
+            </div>
         </>
     )
 }
