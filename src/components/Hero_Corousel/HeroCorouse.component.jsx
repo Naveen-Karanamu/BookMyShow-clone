@@ -1,9 +1,6 @@
 import React from "react";
 import HeroSlider from "react-slick";
 
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const HeroCarousel = () => {
     const settings = {
@@ -21,8 +18,8 @@ const HeroCarousel = () => {
     const settingsLg = {
         outerEdgeLimit: false,
         arrows: true,
-        centerMode: true,
-        centerPadding: "200px",
+        centerMode:true,
+        centerPadding: "150px",
         dots: true,
         infinite: true,
         speed: 500,
