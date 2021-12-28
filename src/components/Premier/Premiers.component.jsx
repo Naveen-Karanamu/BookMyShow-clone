@@ -6,7 +6,7 @@ export const Premiers = () => {
     const settings = {
         infinit: false,
         autoplay: false,
-        slidesToScroll: 5,
+        slidesToScroll: 5 ,
         slidesToShow: 5,
         initialSlide: 0,
         responsive: [{
@@ -54,7 +54,7 @@ export const Premiers = () => {
         {
             src:"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00122532-yecplrayap-portrait.jpg",
             alt:"premier image",
-            title:"Venon: Let There Be The Carnage",
+            title:"Venon: Let There Be Carnage",
             subtitle:"English"
         },
         {
@@ -100,7 +100,7 @@ export const Premiers = () => {
     return (
         <>
             <Slider {...settings}>
-                {premierImages.map((image)=><Poster {...image} />)}
+                {premierImages.map((image)=><Poster {...image} isDark/>)}
             </Slider>
         </>
     );
