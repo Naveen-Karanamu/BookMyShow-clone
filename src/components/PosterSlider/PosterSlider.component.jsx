@@ -8,11 +8,11 @@ export const PosterSlider = (props) => {
     return (
         <>
             <div className="pl-3 pb-2">
-                <h3 className="text-white text-2xl font-bold">{props.title}</h3>
-                <p className="text-white text-sm ">{props.subtitle}</p>
+                <h3 className={` text-2xl font-bold ${props.isDark ?"text-white":"text-gray-800"}`}>{props.title}</h3>
+                <p className={` text-sm ${props.isDark ?"text-white":"text-gray-700"}`}>{props.subtitle}</p>
             </div>
             <Slider {...PosterCarouselSettings}>
-                {props.images.map((image) => <Poster {...image} isDark />)}
+                {props.images.map((image) => <Poster {...image} isDark={props.isDark} />)}
             </Slider>
         </>
     )
