@@ -39,8 +39,6 @@ const Homepage = () => {
             <div className="container mx-auto px-32 pt-7">
                 <PosterSlider images={tempImages} title="Explore Fun Activities" isDark={false} />
             </div>
-
-
         </>
     )
 }
