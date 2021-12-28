@@ -74,7 +74,7 @@ const NavXl = () => {
 const Navbar = () => {
     return (
         <>
-            <nav className="bg-navBarBMS-700">
+            <nav className="bg-navBarBMS-700 ">
                 <div className="md:hidden"><NavSm /></div>
 
                 <div className="hidden md:flex lg:hidden"><NavMd /></div>
