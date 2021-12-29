@@ -2,6 +2,8 @@ import React from "react";
 
 import Slider from "react-slick";
 
+import sliderSettings from "../../config/PosterCarousel.config";
+
 const EntertainmentCard = (props) => {
     return (
         <>
@@ -25,43 +27,43 @@ const EntertainmentCardSlider = () => {
         "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/cooking-collection-202007222211.png"
     ]
 
-    const settings = {
-        infinit: false,
-        autoplay: false,
-        slidesToScroll: 4,
-        slidesToShow: 5,
-        initialSlide: 0,
-        responsive: [{
-            breakpoints: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                infinit: true,
-            },
-        },
-        {
-            breakpoints: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinit: true,
-                initialSlide: 1
-            },
-        },
-        {
-            breakpoints: 480,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                infinit: true,
-                initialSlide: 1
-            },
-        },]
+    // const settings = {
+    //     infinit: false,
+    //     autoplay: false,
+    //     slidesToScroll: 4,
+    //     slidesToShow: 5,
+    //     initialSlide: 0,
+    //     responsive: [{
+    //         breakpoint: 1024,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             slidesToScroll: 2,
+    //             infinit: true,
+    //         },
+    //     },
+    //     {
+    //         breakpoint: 600,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             slidesToScroll: 1,
+    //             infinit: true,
+    //             initialSlide: 1
+    //         },
+    //     },
+    //     {
+    //         breakpoint: 480,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             slidesToScroll: 2,
+    //             infinit: true,
+    //             initialSlide: 1
+    //         },
+    //     },]
 
-    }
+    // }
 
     return (        
-            <Slider {...settings}>
+            <Slider {...sliderSettings}>
                 {EntertainmentCardImages.map((image) => (
                     <EntertainmentCard src={image} />
                 ))
