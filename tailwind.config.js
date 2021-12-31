@@ -21,6 +21,9 @@ module.exports = {
         premierBMS:{
           800:'#2b3148'
         },
+        commonPink:{
+          100:'#f84464'
+        },
       },
     },
   },
