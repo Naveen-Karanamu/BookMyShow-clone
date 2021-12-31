@@ -1,13 +1,14 @@
 import Homepage from "./Pages/Homepage/Homepage.page";
 import DefaultHOC from "./HOC/Default.HOC";
-import { Movie } from "./Pages/Movie.page";
-import MovieHOC from "./HOC/Movie.HOC";
+import SteamHOC from "./HOC/Stream.HOC";
+import { Stream } from "./Pages/Stream.page";
+
 
 function App() {
   return (
   <>
     <DefaultHOC path="/" exact component={Homepage} />
-    <MovieHOC path="/movie/:id" exact component={Movie}/>
+    <SteamHOC path="/stream/:id" exact component={Stream}/>
   </>  
   );
 }

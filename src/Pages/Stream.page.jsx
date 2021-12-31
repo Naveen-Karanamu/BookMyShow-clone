@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Movie = () => {
+export const Stream = () => {
     return (
         <>
             

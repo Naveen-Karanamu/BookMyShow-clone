@@ -1,22 +1,22 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import MovieLayout from "../layouts/Movie.layout";
+import StreamLayout from "../layouts/Stream.layout";
 
-const MovieHOC=({component:Component, ...rest})=>{
+const StreamHOC=({component:Component, ...rest})=>{
     return (
         <>
             <Route {...rest}
             component={(props)=>(
-                <MovieLayout>
+                <StreamLayout>
                     <Component {...props} />
-                </MovieLayout>
+                </StreamLayout>
             )}
             />
         </>
     )
 }
 
-export default MovieHOC;
+export default StreamHOC;
 
 
 
