@@ -9,7 +9,7 @@ const StreamHero = () => {
                 {/* small */}
                 <div>
                     <div className='relative md:hidden' style={{ height: "calc(180vw)" }}>
-                        <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-70' />
+                        <div className='absolute bottom-2 bg-black z-1 w-full h-52 bg-opacity-70' />
                         <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
 
                         <div className='absolute bottom-2 z-30 bg-black'>
