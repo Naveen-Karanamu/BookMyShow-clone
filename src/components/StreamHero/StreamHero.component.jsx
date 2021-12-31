@@ -1,30 +1,33 @@
 import React from 'react'
 import StreamHeroInfo, { StreamHeroInfoMd, StreamHeroInfoSm } from './StreamHeroInfo.component';
-import {IoShareSocialOutline} from "react-icons/io5"
+import { IoShareSocialOutline } from "react-icons/io5"
 
 const StreamHero = () => {
     return (
         <>
             <div>
                 {/* small */}
-                <div className='relative md:hidden' style={{ height: "calc(180vw)" }}>
-                    <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-70' />
-                    <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
+                <div>
+                    <div className='relative md:hidden' style={{ height: "calc(180vw)" }}>
+                        <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-70' />
+                        <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
 
-                    <div className='absolute bottom-2 z-30 bg-black'>
-                        <StreamHeroInfoSm />
+                        <div className='absolute bottom-2 z-30 bg-black'>
+                            <StreamHeroInfoSm />
+                        </div>
+
                     </div>
-                </div>
-                {/* medium */}
-                <div className='relative hidden md:block lg:hidden'>
+                    {/* medium */}
+                    <div className='relative hidden md:block lg:hidden'>
 
-                    <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-50' />
-                    <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
+                        <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-50' />
+                        <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
 
-                    <div className='absolute bottom-0  z-30'>
-                        <StreamHeroInfoMd />
-                        <p>hi</p>
+                        <div className='absolute bottom-0  z-30'>
+                            <StreamHeroInfoMd />
+                        </div>
                     </div>
+                    
                 </div>
                 {/* large */}
                 <div className=' relative hidden lg:block'>
@@ -40,7 +43,7 @@ const StreamHero = () => {
                         <div className=' '>
                             <StreamHeroInfo />
                         </div>
-                        
+
                     </div>
 
                     <div className=' w-full' style={{ height: "31rem" }}>
@@ -49,7 +52,7 @@ const StreamHero = () => {
                     </div>
 
                     <div className=' absolute flex items-center  top-10 right-32 bg-black w-32 h-12 rounded bg-opacity-40'>
-                        <span className='flex items-center justify-center text-gray-200 z-1  gap-4 w-full h-full font-semibold  '><IoShareSocialOutline className='w-9 h-9'/>Share</span>
+                        <span className='flex items-center justify-center text-gray-200 z-1  gap-4 w-full h-full font-semibold  '><IoShareSocialOutline className='w-9 h-9' />Share</span>
                     </div>
 
 
