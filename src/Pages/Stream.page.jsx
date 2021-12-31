@@ -1,10 +1,10 @@
 import React from 'react'
-import MovieHero from '../components/MovieHero/MovieHero.component'
+import StreamHero from '../components/StreamHero/StreamHero.component'
 
 export const Stream = () => {
     return (
         <>
-            <MovieHero />
+            <StreamHero />
         </>
     )
 }

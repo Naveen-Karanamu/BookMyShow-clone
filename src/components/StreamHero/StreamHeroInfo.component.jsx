@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MovieHeroInfo = () => {
+const StreamHeroInfo = () => {
     return (
         <>
             <div className='flex flex-col lg:gap-6 items-start md:w-full sm:w-full lg:w-full'>
@@ -27,7 +27,7 @@ const MovieHeroInfo = () => {
     )
 }
 
-export const MovieHeroInfoMd = () => {
+export const StreamHeroInfoMd = () => {
     return (
         <>
             <div className='flex flex-col lg:gap-6 items-start md:w-full sm:w-full lg:w-full'style={{width:"100vw"}}>
@@ -55,7 +55,7 @@ export const MovieHeroInfoMd = () => {
 }
 
 
-export const MovieHeroInfoSm = () => {
+export const StreamHeroInfoSm = () => {
     return (
         <>
             <div className='flex flex-col w-full p-4 gap-4' style={{ width: "100vw" }}>
@@ -77,4 +77,4 @@ export const MovieHeroInfoSm = () => {
     )
 }
 
-export default MovieHeroInfo;
+export default StreamHeroInfo;
