@@ -1,19 +1,21 @@
 import { logDOM } from "@testing-library/react";
 import React from "react";
-import { BsChevronRight, BsSearch, BsShare } from "react-icons/bs";
-import { IoSearchOutline } from "react-icons/io5"
+import { BsChevronRight, BsSearch, BsChevronLeft } from "react-icons/bs";
+import { IoSearchOutline, IoShareSocialOutline } from "react-icons/io5"
+import {FiChevronLeft} from "react-icons/fi"
 import { VscMenu } from "react-icons/vsc"
 import { FaChevronDown } from "react-icons/fa"
 import Logo from "../../images/logo.image";
 const NavSm = () => {
     return (
         <>
-            <div className="flex items-center justify-between">
-                <div className="px-4 py-2">
-                    <h1 className="text-2xl font-bold text-white">It All Starts Here!</h1>
+            <div className="flex items-center justify-between h-14">
+                <div className="px-4 py-2 flex items-center gap-6">
+                    <span className="text-white "><BsChevronLeft className="w-4 h-4"/></span>
+                    <h1 className="text-md font-semibold text-white">It All Starts Here!</h1>
                 </div>
                 <div className="flex items-center gap-4 px-4">
-                    <div className="text-white w-6 h-6"><BsShare className="w-full h-full" /></div>
+                    <div className="text-white w-6 h-6"><IoShareSocialOutline className="w-full h-full" /></div>
                 </div>
             </div>
         </>
@@ -73,10 +75,10 @@ const NavXl = () => {
 const StreamNavbar = () => {
     return (
         <>
-            <nav className="bg-navBarBMS-700 ">
+            <nav className="absolute inset-x-0 z-30  bg-opacity-10 backdrop-blur-lg lg:relative lg:bg-navBarBMS-700 ">
                 <div className="md:hidden"><NavSm /></div>
 
-                <div className="hidden md:flex lg:hidden"><NavMd /></div>
+                <div className="hidden md:block lg:hidden"><NavSm /></div>
 
                 <div className="hidden lg:flex xl:hidden"><NavLg /></div>
 
