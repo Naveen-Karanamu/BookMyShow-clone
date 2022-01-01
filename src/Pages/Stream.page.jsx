@@ -2,7 +2,44 @@ import React from 'react'
 import StreamHero from '../components/StreamHero/StreamHero.component'
 import { IoIosPaper } from "react-icons/io"
 import Cast from '../components/Cast/Cast.component'
+import PosterSlider from '../components/PosterSlider/PosterSlider.component'
+import tempImages from '../config/TempImages.config'
 export const Stream = () => {
+    const settings = {
+        infinit: false,
+        autoplay: false,
+        slidesToScroll: 5,
+        slidesToShow: 4,
+        initialSlide: 0,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 6,
+                slidesToScroll: 2,
+                infinit: true,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinit: true,
+                initialSlide: 1
+            },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinit: true,
+                initialSlide: 1
+            },
+        },]
+
+    }
+
     return (
         <>
             <StreamHero />
@@ -35,23 +72,99 @@ export const Stream = () => {
                     </div>
                     <hr className='mt-6 mb-4 md:mb-0' />
                 </div >
-                <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pt-10 md:pl-1'>Cast</h1>
-                <div className='flex flex-wrap gap-2 lg:gap-8'>
-                    <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/tom-hardy-8994-24-03-2017-12-37-04.jpg"
-                        castName="Tom Hardy"
-                        role="Eddie Brock / Venom" />
-                    <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/michelle-williams-1472-14-10-2016-05-24-50.jpg"
-                        castName="Michelle Williams"
-                        role="Anne Weying" />
-                    <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/woody-harrelson-2536-24-03-2017-12-37-11.jpg"
-                        castName="Woody Harrelson"
-                        role="Cletus Kasady / Carnage" />
-                    {/* <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/reid-scott-1095987-04-10-2018-12-39-35.jpg"
+                <div >
+                    <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pt-10 md:pl-1'>Cast</h1>
+                    <div className='flex  gap-2 lg:gap-8'>
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/tom-hardy-8994-24-03-2017-12-37-04.jpg"
+                            castName="Tom Hardy"
+                            role="Eddie Brock / Venom" />
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/michelle-williams-1472-14-10-2016-05-24-50.jpg"
+                            castName="Michelle Williams"
+                            role="Anne Weying" />
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/woody-harrelson-2536-24-03-2017-12-37-11.jpg"
+                            castName="Woody Harrelson"
+                            role="Cletus Kasady / Carnage" />
+                        {/* <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/reid-scott-1095987-04-10-2018-12-39-35.jpg"
                         castName="Reid Scott"
                         role="Dan Lewis" /> */}
+                    </div>
+                </div>
+                <hr className='lg:mt-28 mt-32 mb-5 md:-mb-4 lg:mb-0' />
+                <div >
+                    <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pt-10 md:pl-1'>Crew</h1>
+                    <div className='flex  gap-2 lg:gap-8'>
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/tom-hardy-8994-24-03-2017-12-37-04.jpg"
+                            castName="Tom Hardy"
+                            role="Eddie Brock / Venom" />
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/michelle-williams-1472-14-10-2016-05-24-50.jpg"
+                            castName="Michelle Williams"
+                            role="Anne Weying" />
+                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/woody-harrelson-2536-24-03-2017-12-37-11.jpg"
+                            castName="Woody Harrelson"
+                            role="Cletus Kasady / Carnage" />
+                        {/* <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/reid-scott-1095987-04-10-2018-12-39-35.jpg"
+                        castName="Reid Scott"
+                        role="Dan Lewis" /> */}
+                    </div>
+                </div>
+                <hr className='lg:mt-28 mt-32 mb-5 md:mb-6 lg:mb-8' />
+                <div className='hidden lg:block w-1/2'>
+                    <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pl-1'>Reviews</h1>
+                    <div className='flex items-center justify-between bg-gray-100 py-3 px-6 rounded-lg my-3 ' >
+                        <div >
+                            <h2 className='text-lg font-semibold text-gray-900'>Watched? Add your rating & review</h2>
+                            <p className='text-md text-gray-700'>Your ratings matter</p>
+                        </div>
+                        <button className='bg-commonPink-100 text-white font-semibold px-3 py-2 rounded-lg text-lg'>Rate now</button>
+
+                    </div>
+                </div>
+                <hr className=' hidden lg:block my-9' />
+                <div className='lg:-mt-2'>
+                    <h1 className='lg:text-2xl lg:font-bold -mb-4 md:mb-4 lg:-mb-2 text-lg font-semibold md:pl-1'>Buzz</h1>
+                    <div className='lg:flex lg:gap-8'>
+                        <div className='flex items-center gap-4 lg:gap-4 md:gap-16 my-6 lg:w-1/2 lg:border-solid lg:border-2 lg:rounded-lg '>
+                            <div className='w-32 h-20 md:w-16 md:h-16 lg:w-48 lg:h-32'>
+                                <img src="https://in.bmscdn.com/content-buzz/2021/05/hollywood-sequels-in-2021-300x300-40-1.jpg" alt="buzz image" className='w-full h-full rounded lg:rounded-l-lg lg:rounded-r-none' />
+                            </div>
+                            <div>
+                                <p className='text-md text-gray-700'>After ‘The Conjuring 3’, Watch Out For These Hollywood Sequels</p>
+                                <span className='flex items-center gap-2'>
+                                    <div className='w-7 h-7 '>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyHiqAKGo9SxTL58tfSynlaWSpv9BViDvTXfxbirRrTgnQiQqXfujXtPY2On0hGNipGKA&usqp=CAU" alt="person" className='w-full h-full rounded-full' />
+                                    </div>
+                                    <p className='text-xs text-gray-500 font-medium'>Delnaz Divecha</p>
+                                    <p className='text-xs text-gray-300'>138 Days ago</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div className='flex items-center gap-4 lg:gap-4 md:gap-16 my-6 lg:w-1/2 lg:border-solid lg:border-2 lg:rounded-lg '>
+                            <div className='w-32 h-20 md:w-16 md:h-16 lg:w-48 lg:h-32'>
+                                <img src="https://in.bmscdn.com/content-buzz/2021/04/superheromoviessquare.jpg" alt="buzz image" className='w-full h-full rounded lg:rounded-l-lg lg:rounded-r-none' />
+                            </div>
+                            <div>
+                                <p className='text-md text-gray-700'>The Super List Of All The Superhero Movies Coming Out In 2021</p>
+                                <span className='flex items-center gap-2'>
+                                    <div className='w-7 h-7 '>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbW1NzZ6pbyYHK3mRFtCzYRFL_dK6Kv7rAFw&usqp=CAU" alt="person" className='w-full h-full rounded-full' />
+                                    </div>
+                                    <p className='text-xs text-gray-500 font-medium'>Mansi Bengali
+                                    </p>
+                                    <p className='text-xs text-gray-300'>122 Days ago</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className='lg:mt-4 mb-5 md:mb-6 lg:mb-8' />
+                    <div>
+                     <PosterSlider config={settings} images={tempImages} title="You might also like" isDark={false} />
+                    </div>
+                    <hr className='lg:mt-4 mb-5 md:mb-6 lg:mb-8' />
+                    <div>
+                        <PosterSlider config={settings} images={tempImages} title="BMS XCLUSIV" isDark={false} />
+                    </div>
                 </div>
             </div>
-
 
         </>
     )
