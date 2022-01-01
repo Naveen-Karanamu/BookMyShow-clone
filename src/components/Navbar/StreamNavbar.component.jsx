@@ -55,7 +55,7 @@ const NavLg = () => {
 const NavXl = () => {
     return (
         <>
-            <div className="h-16 flex items-center container mx-auto px-28 ">
+            <div className="h-16 flex items-center container mx-auto px-32 ">
                 <div className=" flex items-center w-full">
                     {/* <img className="bg-transparent h-12 pr-5" src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png" alt="logo" /> */}
                     <Logo />
