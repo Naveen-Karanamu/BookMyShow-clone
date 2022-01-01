@@ -1,7 +1,7 @@
 import React from "react";
-import EntertainmentCardSlider from "../../components/Entertainment/Entertainment.component";
-import tempImages from "../../config/TempImages.config";
-import PosterSlider from "../../components/PosterSlider/PosterSlider.component";
+import EntertainmentCardSlider from "../components/Entertainment/Entertainment.component";
+import tempImages from "../config/TempImages.config";
+import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
 const Homepage = () => {
     return (

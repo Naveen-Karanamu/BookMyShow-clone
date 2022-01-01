@@ -44,7 +44,7 @@ const NavLg = () => {
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
                     <p className="text-white flex items-center gap-1">Rajamahendravaram (Rajahmundry) <FaChevronDown className="w-3 h-3" /></p>
-                    <button className="bg-red-500 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
+                    <button className="bg-commonPink-100 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
             </div>
@@ -64,7 +64,7 @@ const NavXl = () => {
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
                     <p className="text-white flex items-center gap-1">Rajamahendravaram (Rajahmundry) <FaChevronDown className="w-3 h-3" /></p>
-                    <button className="bg-red-500 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
+                    <button className="bg-commonPink-100 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
             </div>
