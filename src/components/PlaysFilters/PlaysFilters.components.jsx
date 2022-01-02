@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 
 const PlaysFilter = (props) => {
-    const dataRange = () => {
+    const checkBox = (props) => {
         return (
             <>
                 <div className='flex items-center gap-4 px-1'>
@@ -11,6 +11,9 @@ const PlaysFilter = (props) => {
                 </div>
             </>
         )
+    }
+    const blank=(props)=>{
+        return(<></>);
     }
     return (
         <Disclosure >
@@ -37,7 +40,9 @@ const PlaysFilter = (props) => {
                                 ))}
 
                             </div>
-                            
+                            {
+                                props.checkBox?<checkBox />:<blank />
+                            }
                         </Disclosure.Panel>
                     </>
                 )

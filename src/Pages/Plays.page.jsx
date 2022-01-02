@@ -55,11 +55,8 @@ const Plays = () => {
                         <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 py-3'>Filters</h1>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} />
-                            <div className='flex items-center gap-4 px-1'>
-                                <input type="checkbox" />
-                                <h5 className='text-sm'>Date Range</h5>
-                            </div>
+                            <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} checkBox={true} />
+                            
 
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative '>

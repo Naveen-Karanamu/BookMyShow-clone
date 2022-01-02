@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSlider from "react-slick";
 
+import { NextArrow,PrevArrow } from "./Arrows.component";
 
 const HeroCarousel = () => {
     const settings = {
@@ -12,7 +13,9 @@ const HeroCarousel = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay:true
+        autoplay:true,
+        // nextArrow=<NextArrow />,
+        // prevArrow=<PrevArrow />
     }
 
     const settingsLg = {
@@ -26,6 +29,8 @@ const HeroCarousel = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
+        // nextArrow=<NextArrow />,
+        // prevArrow=<PrevArrow />
     };
 
     const images = ["https://images.unsplash.com/photo-1638913658828-afb88c3d4d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
