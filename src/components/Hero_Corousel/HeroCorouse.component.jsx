@@ -10,13 +10,14 @@ import { NextArrow, PrevArrow } from "./Arrows.component";
 const HeroCarousel = () => {
     const [images, setImages] = useState([]);
     useEffect(() => {
-        const requestNowPlayingMovies = async () => {
-            const getImages = await axios.get("/movie/now_playing");
-            // console.log(getImages);
+        const requestPopularMovies = async () => {
+            const getImages = await axios.get("/movie/popular");
+            
             setImages(getImages.data.results);
         };
-        requestNowPlayingMovies();
+        requestPopularMovies();
     }, [])
+    // console.log(images);
 
 
     const settings = {
