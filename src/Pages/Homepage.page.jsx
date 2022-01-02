@@ -6,7 +6,7 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 const Homepage = () => {
     return (
         <>
-            <div className="container mx-auto lg:px-32 my-14">
+            <div className="container mx-auto lg:px-32 mb-14 mt-8">
                 <h1 className="text-2xl font-bold text-gray-800 pb-2">The Best of Entertainment</h1>
                 <EntertainmentCardSlider />
             </div>

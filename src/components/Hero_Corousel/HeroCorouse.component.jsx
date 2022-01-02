@@ -1,19 +1,34 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { FaLaptopHouse } from "react-icons/fa";
 import HeroSlider from "react-slick";
 
-import { NextArrow,PrevArrow } from "./Arrows.component";
+import { NextArrow, PrevArrow } from "./Arrows.component";
+
+
 
 const HeroCarousel = () => {
+    const [images, setImages] = useState([]);
+    useEffect(() => {
+        const requestNowPlayingMovies = async () => {
+            const getImages = await axios.get("/movie/now_playing");
+            // console.log(getImages);
+            setImages(getImages.data.results);
+        };
+        requestNowPlayingMovies();
+    }, [])
+
+
     const settings = {
-        arrows:true,
-        centerMode:true,
-        centerPadding:"0px",
-        dots: true,
+        arrows: true,
+        centerMode: true,
+        centerPadding: "0px",
+        dots: FaLaptopHouse,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay:true,
+        autoplay: true,
         // nextArrow=<NextArrow />,
         // prevArrow=<PrevArrow />
     }
@@ -21,9 +36,9 @@ const HeroCarousel = () => {
     const settingsLg = {
         outerEdgeLimit: false,
         arrows: true,
-        centerMode:true,
+        centerMode: true,
         centerPadding: "150px",
-        dots: true,
+        dots: FaLaptopHouse,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -33,20 +48,14 @@ const HeroCarousel = () => {
         // prevArrow=<PrevArrow />
     };
 
-    const images = ["https://images.unsplash.com/photo-1638913658828-afb88c3d4d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1640562051318-b849e5290551?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1640590268965-add58b4844f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1640557434280-96024d8b3d69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1640547075007-5ef0af61e768?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-    ];
 
     return (
         <>
             <div className="lg:hidden">
                 <HeroSlider {...settings}>
-                    {images.map((image)=>(
+                    {images.map((image) => (
                         <div className=" h-48 md:w-full md:h-40">
-                            <img src={image}alt="testing" className="w-full h-full" />
+                            <img src={`http://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full h-full" />
                         </div>
                     ))}
                 </HeroSlider>
@@ -55,8 +64,8 @@ const HeroCarousel = () => {
             <div className="hidden lg:block">
                 <HeroSlider {...settingsLg} >
                     {images.map((image) => (
-                        <div className="w-full h-80  ">
-                            <img src={image} alt="testing" className="w-full h-full py-2 px-1 rounded-xl" />
+                        <div className="w-full h-96 -mb-16">
+                            <img src={`http://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full  py-2 px-1 rounded-xl" style={{ height: "85%" }} />
                         </div>
                     ))}
                 </HeroSlider>
