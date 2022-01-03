@@ -23,7 +23,7 @@ const Homepage = () => {
             setTopRatedMovies(getTopRatedMovies.data.results);
         }
         requestTopRatedMovies();
-    })
+    },[])
 
     const [popularMovies, setPopularMovies]=useState([]);
     useEffect(()=>{
@@ -32,7 +32,7 @@ const Homepage = () => {
             setPopularMovies(getPopularMovies.data.results);
         }
         requestPopularMovies();
-    })
+    },[])
     
     const [upcomingMovies, setUpcomingMovies]=useState([]);
     useEffect(()=>{
@@ -41,7 +41,7 @@ const Homepage = () => {
             setUpcomingMovies(getUpcomingMovies.data.results);
         }
         requestUpcomingMovies();
-    })
+    },[])
 
     return (
         <>
