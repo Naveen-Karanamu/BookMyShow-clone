@@ -5,24 +5,24 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import axios from "axios";
 
 const Homepage = () => {
-    const [latestMovies, setLatestMovies]=useState([]);
+    const [nowPlayingMovies, setNowPlayingMovies]=useState([]);
     useEffect(()=>{
-        const requestLatestMovies=async ()=>{
-                const getLatestMovies=await axios.get("/movie/now_playing");
-                setLatestMovies(getLatestMovies.data.results)
+        const requestNowPlayingMovies=async ()=>{
+                const getNowPlayingMovies=await axios.get("/movie/now_playing");
+                setNowPlayingMovies(getNowPlayingMovies.data.results)
 
         };
-        requestLatestMovies();
-        console.log(latestMovies);
+        requestNowPlayingMovies();
+        // console.log(latestMovies);
     },[])
 
-    const [nowPlaying, setNowPlaying]=useState([]);
+    const [topRatedMovies, setTopRatedMovies]=useState([]);
     useEffect(()=>{
-        const requestNowPlaying=async ()=>{
-            const getNowPlaying=await axios.get("/movie/top_rated");
-            setNowPlaying(getNowPlaying.data.results);
+        const requestTopRatedMovies=async ()=>{
+            const getTopRatedMovies=await axios.get("/movie/top_rated");
+            setTopRatedMovies(getTopRatedMovies.data.results);
         }
-        requestNowPlaying();
+        requestTopRatedMovies();
     })
 
     const [popularMovies, setPopularMovies]=useState([]);
@@ -46,7 +46,7 @@ const Homepage = () => {
     return (
         <>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
-                <PosterSlider images={latestMovies} title="Recommended Movies" isDark={false} />
+                <PosterSlider images={nowPlayingMovies} title="Recommended Movies" isDark={false} />
             </div>
             <div className="container mx-auto lg:px-32 my-14">
                 <h1 className="text-2xl font-bold text-gray-800 pb-2">The Best of Entertainment</h1>
@@ -59,7 +59,7 @@ const Homepage = () => {
                         <img className="pt-6 pb-10" src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png" alt="premier description " />
                     </div>
 
-                    <PosterSlider images={nowPlaying} title="Premieres" subtitle="Brand new releases every friday" isDark />
+                    <PosterSlider images={topRatedMovies} title="Premieres" subtitle="Brand new releases every friday" isDark />
                 </div>
 
             </div>

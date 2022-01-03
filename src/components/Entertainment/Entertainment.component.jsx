@@ -61,15 +61,19 @@ const EntertainmentCardSlider = () => {
     //     },]
 
     // }
+    
+    const settings = {
+        initialSlide: 0,
+    }
 
-    return (        
-            <Slider {...sliderSettings} className="">
-                {EntertainmentCardImages.map((image) => (
-                    <EntertainmentCard src={image} />
-                ))
+    return (
+        <Slider {...sliderSettings} {...settings}>
+            {EntertainmentCardImages.map((image) => (
+                <EntertainmentCard src={image} />
+            ))
 
-                }
-            </Slider>
+            }
+        </Slider>
     )
 }
 
