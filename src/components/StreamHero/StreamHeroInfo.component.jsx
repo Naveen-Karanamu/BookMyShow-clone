@@ -53,7 +53,7 @@ export const StreamHeroInfoMd = () => {
                     </div>
                 </div>
                 <div className='-mt-6 px-4'>
-                    <p className='py-4 text-xs text-gray-300'>When deranged serial killer Cletus Kasady becomes host to an alien symbiote, Eddie Brock and Venom must put aside their differences to stop his reign of terror. Available in 4k on BMS stream.</p>
+                    <p className='py-4 text-xs text-gray-300'>{movie.overview}</p>
                 </div>               
 
             </div>
@@ -83,7 +83,7 @@ export const StreamHeroInfoSm = () => {
                     <p className=' text-gray-300 text-xs'>{(movie.runtime/60).toFixed(0)}h {(movie.runtime%60)}m  &bull;  {genres}   &bull;   UA  &bull;  14 Oct, 2021</p>
                 </div>
                 <div className='-mt-5 -mb-3'>
-                    <p className='py-4 text-xs text-gray-300'>When deranged serial killer Cletus Kasady becomes host to an alien symbiote, Eddie Brock and Venom must put aside their differences to stop his reign of terror. Available in 4k on BMS stream.</p>
+                    <p className='py-4 text-xs text-gray-300'>{movie.overview}</p>
                 </div>
 
             </div>

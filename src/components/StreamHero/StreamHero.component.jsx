@@ -12,7 +12,7 @@ const StreamHero = () => {
                 {/* small */}
                 <div>
                     <div className='relative md:hidden' style={{ height: "calc(180vw)" }}>
-                        <div className='absolute bottom-2 bg-black z-10 w-full h-52 bg-opacity-90' />
+                        <div className='absolute bottom-0 bg-black z-10 w-full h-52 bg-opacity-90' />
                         <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt="poster image" />
 
                         <div className='absolute bottom-0 z-30 bg-black bg-opacity-70'>

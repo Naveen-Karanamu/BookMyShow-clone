@@ -14,7 +14,7 @@ const StreamLayout = (props) => {
             setMovie(getMovieData.data); 
         };
         requestMovie();
-    },[]);
+    },[id]);
     return (
         <div>
             <StreamNavbar />

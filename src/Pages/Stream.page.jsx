@@ -1,10 +1,52 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import StreamHero from '../components/StreamHero/StreamHero.component'
 import { IoIosPaper } from "react-icons/io"
 import Cast from '../components/Cast/Cast.component'
 import PosterSlider from '../components/PosterSlider/PosterSlider.component'
 import tempImages from '../config/TempImages.config'
+import { MovieContext } from '../context/movie.context'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
+import Slider from 'react-slick'
 export const Stream = () => {
+    const{movie}=useContext(MovieContext)
+    const[cast,setCast]=useState([]);
+    const{id}=useParams();
+    useEffect(()=>{
+        const requestCast=async()=>{
+            const getCast=await axios.get(`/movie/${id}/credits`)
+            setCast(getCast.data.cast);
+        }
+        requestCast();
+    },[id])
+
+    const[crew,setCrew]=useState([]);
+    useEffect(()=>{
+        const requestCrew=async()=>{
+            const getCrew=await axios.get(`/movie/${id}/credits`)
+            setCrew(getCrew.data.crew);
+        }
+        requestCrew();
+    },[id])
+
+    const[simailarMovies,setSimilarMovies]=useState([]);
+    useEffect(()=>{
+        const requestSimilarMovies=async()=>{
+            const getSimilarMovies=await axios.get(`/movie/${id}/similar`)
+            setSimilarMovies(getSimilarMovies.data.results);
+        }
+        requestSimilarMovies();
+    },[id])
+
+    const[recommended,setRecommended]=useState([]);
+    useEffect(()=>{
+        const requestRecommended=async()=>{
+            const getRecommended=await axios.get(`/movie/${id}/recommendations`)
+            setRecommended(getRecommended.data.results);
+        }
+        requestRecommended();
+    },[id])
+
     const settings = {
         infinit: false,
         autoplay: false,
@@ -40,12 +82,47 @@ export const Stream = () => {
 
     }
 
+    const settingsCast = {
+        infinit: false,
+        autoplay: false,
+        slidesToScroll: 3,
+        slidesToShow: 5,
+        initialSlide: 0,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 6,
+                slidesToScroll: 2,
+                infinit: true,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 7,
+                slidesToScroll: 4,
+                infinit: true,
+                initialSlide: 1
+            },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                infinit: true,
+                initialSlide: 1
+            },
+        },]
+
+    }
+
     return (
         <>
             <StreamHero />
             <div className='hidden lg:block w-3/5 mt-8 ml-36'>
                 <h2 className='hidden lg:block text-2xl font-bold'>About the movie</h2>
-                <p className='py-4 text-md'>When deranged serial killer Cletus Kasady becomes host to an alien symbiote, Eddie Brock and Venom must put aside their differences to stop his reign of terror. Available in 4k on BMS stream.</p>
+                <p className='py-4 text-md'>{movie.overview}</p>
                 <hr className='mt-4' />
 
             </div>
@@ -70,41 +147,33 @@ export const Stream = () => {
                         </div>
 
                     </div>
-                    <hr className='mt-6 mb-4 md:mb-0' />
+                    <hr className='lg:mt-10 mt-8 mb-4 md:mb-0' />
                 </div >
                 <div >
                     <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pt-10 md:pl-1'>Cast</h1>
-                    <div className='flex  gap-2 lg:gap-8'>
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/tom-hardy-8994-24-03-2017-12-37-04.jpg"
-                            castName="Tom Hardy"
-                            role="Eddie Brock / Venom" />
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/michelle-williams-1472-14-10-2016-05-24-50.jpg"
-                            castName="Michelle Williams"
-                            role="Anne Weying" />
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/woody-harrelson-2536-24-03-2017-12-37-11.jpg"
-                            castName="Woody Harrelson"
-                            role="Cletus Kasady / Carnage" />
-                        {/* <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/reid-scott-1095987-04-10-2018-12-39-35.jpg"
-                        castName="Reid Scott"
-                        role="Dan Lewis" /> */}
+                    <div className=''>
+                        <Slider {...settingsCast} >
+                        {cast.map((castData)=>
+                        <Cast src={`http://image.tmdb.org/t/p/original${castData.profile_path}`}
+                        castName={castData.original_name}
+                        role={castData.character}/>
+                        )}
+                        </Slider>
+                    
                     </div>
                 </div>
-                <hr className='lg:mt-28 mt-32 mb-5 md:-mb-4 lg:mb-0' />
+                <hr className='lg:mt-10 md:mt-3 mt-8  mb-5 md:-mb-4 lg:mb-0' />
                 <div >
                     <h1 className='lg:text-2xl lg:font-bold  mb-4 text-lg font-semibold md:pt-10 md:pl-1'>Crew</h1>
-                    <div className='flex  gap-2 lg:gap-8'>
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/tom-hardy-8994-24-03-2017-12-37-04.jpg"
-                            castName="Tom Hardy"
-                            role="Eddie Brock / Venom" />
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/michelle-williams-1472-14-10-2016-05-24-50.jpg"
-                            castName="Michelle Williams"
-                            role="Anne Weying" />
-                        <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/woody-harrelson-2536-24-03-2017-12-37-11.jpg"
-                            castName="Woody Harrelson"
-                            role="Cletus Kasady / Carnage" />
-                        {/* <Cast src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/reid-scott-1095987-04-10-2018-12-39-35.jpg"
-                        castName="Reid Scott"
-                        role="Dan Lewis" /> */}
+                    <div className=''>
+                        <Slider {...settingsCast} >
+                        {crew.map((crewData)=>
+                        <Cast src={`http://image.tmdb.org/t/p/original${crewData.profile_path}`}
+                        castName={crewData.original_name}
+                        role={crewData.known_for_department}/>
+                        )}
+                        </Slider>
+                    
                     </div>
                 </div>
                 <hr className='lg:mt-28 mt-32 mb-5 md:mb-6 lg:mb-8' />
@@ -157,11 +226,11 @@ export const Stream = () => {
                     </div>
                     <hr className='lg:mt-4 mb-5 md:mb-6 lg:mb-8' />
                     <div>
-                     <PosterSlider config={settings} images={tempImages} title="You might also like" isDark={false} />
+                     <PosterSlider config={settings} images={simailarMovies} title="You might also like" isDark={false} />
                     </div>
                     <hr className='lg:mt-4 mb-5 md:mb-6 lg:mb-8' />
                     <div>
-                        <PosterSlider config={settings} images={tempImages} title="BMS XCLUSIV" isDark={false} />
+                        <PosterSlider config={settings} images={recommended} title="BMS XCLUSIV" isDark={false} />
                     </div>
                 </div>
             </div>
