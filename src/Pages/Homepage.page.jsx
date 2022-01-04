@@ -43,6 +43,42 @@ const Homepage = () => {
         requestUpcomingMovies();
     },[])
 
+    const [trending, setTrending]=useState([]);
+    useEffect(()=>{
+        const requestTrending=async ()=>{
+            const getTrending=await axios.get("/trending/tv/week");
+            setTrending(getTrending.data.results);
+        }
+        requestTrending();
+    },[])
+
+    const [trendingAll, setTrendingAll]=useState([]);
+    useEffect(()=>{
+        const requestTrendingAll=async ()=>{
+            const getTrendingAll=await axios.get("/trending/all/week");
+            setTrendingAll(getTrendingAll.data.results);
+        }
+        requestTrendingAll();
+    },[])
+    const [trendingMovie, setTrendingMovie]=useState([]);
+    useEffect(()=>{
+        const requestTrendingMovie=async ()=>{
+            const getTrendingMovie=await axios.get("/trending/movie/day");
+            setTrendingMovie(getTrendingMovie.data.results);
+        }
+        requestTrendingMovie();
+    },[])
+    const [trendingTvDay, setTrendingTvDay]=useState([]);
+    useEffect(()=>{
+        const requestTrendingTvDay=async ()=>{
+            const getTrendingTvDay=await axios.get("/trending/tv/day");
+            setTrendingTvDay(getTrendingTvDay.data.results);
+        }
+        requestTrendingTvDay();
+    },[])
+    
+
+   
     return (
         <>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
@@ -70,16 +106,16 @@ const Homepage = () => {
                 <PosterSlider images={upcomingMovies } title="Outodoor Events" isDark={false} />
             </div>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
-                <PosterSlider images={tempImages} title="Laughter Therapy" isDark={false} />
+                <PosterSlider images={trendingAll} title="Laughter Therapy" isDark={false} />
             </div>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
-                <PosterSlider images={tempImages} title="Popular Events" isDark={false} />
+                <PosterSlider images={trending} title="Popular Events" isDark={false} />
             </div>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
-                <PosterSlider images={tempImages} title="Top Games & Sport Events" isDark={false} />
+                <PosterSlider images={trendingMovie} title="Top Games & Sport Events" isDark={false} />
             </div>
             <div className="lg:container lg:mx-auto lg:px-32 pt-7">
-                <PosterSlider images={tempImages} title="Explore Fun Activities" isDark={false} />
+                <PosterSlider images={trendingTvDay} title="Explore Fun Activities" isDark={false} />
             </div>
         </>
     )
