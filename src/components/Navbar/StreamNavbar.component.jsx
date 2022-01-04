@@ -1,18 +1,20 @@
 import { logDOM } from "@testing-library/react";
-import React from "react";
+import React, { useContext } from "react";
 import { BsChevronRight, BsSearch, BsChevronLeft } from "react-icons/bs";
 import { IoSearchOutline, IoShareSocialOutline } from "react-icons/io5"
 import { FiChevronLeft } from "react-icons/fi"
 import { VscMenu } from "react-icons/vsc"
 import { FaChevronDown } from "react-icons/fa"
 import Logo from "../../images/logo.image";
+import { MovieContext } from "../../context/movie.context";
 const NavSm = () => {
+    const {movie}=useContext(MovieContext)
     return (
         <>
             <div className="flex items-center justify-between h-14">
                 <div className="px-4 py-2 flex items-center gap-6">
                     <span className="text-white "><BsChevronLeft className="w-4 h-4" /></span>
-                    <h1 className="text-md font-semibold text-white">It All Starts Here!</h1>
+                    <h1 className="text-md font-semibold text-white">{movie.original_title}</h1>
                 </div>
                 <div className="flex items-center gap-4 px-4">
                     <div className="text-white w-6 h-6"><IoShareSocialOutline className="w-full h-full" /></div>

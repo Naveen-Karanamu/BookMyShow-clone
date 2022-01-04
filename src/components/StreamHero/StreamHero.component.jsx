@@ -1,27 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import StreamHeroInfo, { StreamHeroInfoMd, StreamHeroInfoSm } from './StreamHeroInfo.component';
 import { IoShareSocialOutline } from "react-icons/io5"
+import { MovieContext } from '../../context/movie.context';
 
 const StreamHero = () => {
+    const {movie}=useContext(MovieContext);
+
     return (
         <>
             <div>
                 {/* small */}
                 <div>
                     <div className='relative md:hidden' style={{ height: "calc(180vw)" }}>
-                        <div className='absolute bottom-2 bg-black z-1 w-full h-52 bg-opacity-70' />
-                        <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
+                        <div className='absolute bottom-2 bg-black z-10 w-full h-52 bg-opacity-90' />
+                        <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt="poster image" />
 
-                        <div className='absolute bottom-2 z-30 bg-black'>
+                        <div className='absolute bottom-0 z-30 bg-black bg-opacity-70'>
                             <StreamHeroInfoSm />
                         </div>
 
                     </div>
                     {/* medium */}
-                    <div className='relative hidden md:block lg:hidden'>
+                    <div className='relative hidden md:block lg:hidden' >
 
-                        <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-50' />
-                        <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" />
+                        <div className='absolute bottom-0 bg-black z-1 w-full h-52 bg-opacity-80' />
+                        <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}` } alt="poster image" style={{height:"calc(134vw)"}} className='w-full'/>
 
                         <div className='absolute bottom-0  z-30'>
                             <StreamHeroInfoMd />
@@ -38,7 +41,7 @@ const StreamHero = () => {
                     }} />
                     <div className='absolute z-30 bottom-10 left-36 flex items-center gap-8'>
                         <div className=' w-64 ' style={{ height: "26rem" }}>
-                            <img src="https://in.bmscdn.com/iedb/Movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster image" className='w-full h-full rounded-2xl' />
+                            <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} alt="poster image" className='w-full h-full rounded-2xl' />
                         </div>
                         <div className=' '>
                             <StreamHeroInfo />
@@ -47,7 +50,7 @@ const StreamHero = () => {
                     </div>
 
                     <div className=' w-full' style={{ height: "31rem" }}>
-                        <img src="https://in.bmscdn.com/iedb/Movies/images/extra/horizontal_no_logo/mobile/listing/xxlarge/venom-let-there-be-carnage-et00122532-25-12-2021-10-10-53.jpg" alt="poster background" className='h-full w-full' />
+                        <img src={`http://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="poster background" className='h-full w-full' />
 
                     </div>
 
