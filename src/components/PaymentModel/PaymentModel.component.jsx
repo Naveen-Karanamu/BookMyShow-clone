@@ -1,16 +1,34 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-
+import Logo from '../../images/logo.image';
 export default function PaymentModal({ isOpen, setIsOpen, price, title, subtitle }) {
 
     function closeModal() {
         setIsOpen(false)
     }
 
+    const launchRazorPay = () => {
+        let options = {
+            key: "rzp_test_PKPubWYc4XYFkp",
+            amount: price * 100,
+            currency: "INR",
+            name: "BookMyShow",
+            description: "Payment Portal",
+            image: <Logo />,
+            handler: () => {
+                setIsOpen(false);
+                alert("Payment Done");
+            },
+            theme: {
+                color: "f84464"
+            },
+
+        };
+        const RazorPay = new window.Razorpay(options);
+        RazorPay.open();
+    }
     return (
         <>
-
-
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
                     as="div"
@@ -63,7 +81,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price, title, subtitle
                                     <button
                                         type="button"
                                         className="w-full inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-commonPink-100 border border-transparent rounded-md hover:bg-red-800focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red"
-                                        onClick={closeModal}
+                                        onClick={launchRazorPay}
                                     >
                                         Pay ₹{price}
                                     </button>
