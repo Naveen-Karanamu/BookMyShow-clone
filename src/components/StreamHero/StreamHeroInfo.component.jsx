@@ -1,13 +1,30 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MovieContext } from '../../context/movie.context'
+import PaymentModal from '../PaymentModel/PaymentModel.component';
 
 const StreamHeroInfo = () => {
     const {movie}=useContext(MovieContext);
     const genres= movie.genres?.map(({name})=>name).join(", ");
+    const [isopen, setOpen] =useState(false);
+    const [price, setPrice ]=useState(0);
+    const [title,setTitle]=useState();
+    const [subtitle,setSubtitle]=useState();
 
-    return (
-        
+    const rentMovie=()=>{
+        setOpen(true);
+        setPrice(199);
+        setTitle("Rent")
+        setSubtitle("You can rent this movie for 30 days but will have 2 days to watch it once you start playback (available for download)");
+    }
+    const buyMovie=()=>{
+        setOpen(true);
+        setPrice(499);
+        setTitle("Buy")
+        setSubtitle("Watch the movie any time after purchasing it (available for download)");
+    }
+    return (        
         <>
+        <PaymentModal setIsOpen={setOpen} isOpen={isopen} price={price} title={title} subtitle={subtitle} />
             <div className='flex flex-col lg:gap-6 items-start md:w-full sm:w-full lg:w-full'>
                 <span className=' text-white text-xs py-1 px-2 lg:-mb-3 md:-mb-2 rounded-xl md:ml-4 lg:ml-0' style={{ background: "#1f253a" }}>Streaming Now</span>
                 <h2 className='hidden lg:flex  text-4xl text-white font-bold '>{movie.original_title}</h2>
@@ -19,8 +36,8 @@ const StreamHeroInfo = () => {
                     </div>
 
                     <div className='text-white flex gap-4 lg:w-11/12 pt-2 md:w-screen '>
-                        <button className='bg-commonPink-100 w-full h-full lg:py-3 md:py-2 rounded-lg font-semibold'>Rent ₹149</button>
-                        <button className='bg-commonPink-100 w-full h-full lg:py-3 md:py-2 rounded-lg font-semibold'>Buy ₹589</button>
+                        <button onClick={rentMovie} className='bg-commonPink-100 w-full h-full lg:py-3 md:py-2 rounded-lg font-semibold'>Rent ₹199</button>
+                        <button onClick={buyMovie} className='bg-commonPink-100 w-full h-full lg:py-3 md:py-2 rounded-lg font-semibold'>Buy ₹499</button>
                     </div>
                 </div>
 
