@@ -7,7 +7,7 @@ import { BiTime } from "react-icons/bi"
 const PlaysSubPage = () => {
     return (<>
         <div className="lg:container lg:mx-auto lg:px-48">
-            <div className="w-full h-52 lg:h-full">
+            <div className="w-full h-52 lg:h-full md:h-96">
                 <img src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-free-fire-solo-and-squad-bermuda-0-2020-12-8-t-13-48-37.jpg" className="w-full h-full" />
             </div>
             <div>
@@ -46,7 +46,7 @@ const PlaysSubPage = () => {
                     </div>
 
                     <h1 className="text-lg font-medium pb-3">Click on Interested to stay updated about this event.</h1>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between">
                         <div className="flex flex-col">
                             <div className="flex items-center gap-2">
                                 <AiFillLike className="text-lime-600 w-6 h-6" />
@@ -54,7 +54,9 @@ const PlaysSubPage = () => {
                             </div >
                             <p className="text-navBarBMS-400 pt-1 w-3/4">People have shown interest recently</p>
                         </div>
-                        <button className="border-2 px-10 h-10 text-md text-commonPink-200 border-commonPink-200 rounded">Intersted?</button>
+                        <div >
+                            <button className="border-2 px-10 h-10 text-md text-commonPink-200 border-commonPink-200 rounded">Interested?</button>
+                        </div>
                     </div>
 
                     <div className="py-4">
