@@ -23,7 +23,8 @@ module.exports = {
         },
         commonPink:{
           100:'#f84464',
-          200:'#df4d6c'
+          200:'#df4d6c',
+          300:'#fff9e3'//yellow
         },
       },
     },

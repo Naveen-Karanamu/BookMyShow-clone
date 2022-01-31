@@ -1,8 +1,19 @@
-import React from 'react'
-import Poster from '../components/Poster/Poster.component';
+import React from 'react';
+import { useState,useEffect } from 'react';
+import PlaysPoster from '../components/Poster/Plays.poster';
 import PlaysFilter from "../components/PlaysFilters/PlaysFilters.components"
+import axios from 'axios';
 
 const Plays = () => {
+
+    const [play,setPlay]=useState([]);
+    useEffect(()=>{
+        const reqestPlay= async()=>{
+            const getPlay=await axios.get("/movie/106912/recommendations");
+        setPlay(getPlay.data.ressults);
+        }
+    })
+
     return (
         <>
             <div className='lg:container lg:mx-auto lg:px-32 '>
@@ -15,7 +26,7 @@ const Plays = () => {
                                     <p className='text-xs text-commonPink-200'>Theatre</p>
                                 </button>
                             </div>
-                            <div>
+                            <div> 
                                 <button className='border py-2 bg-white px-3 rounded-3xl border-2 border-gray-300'>
                                     <p className='text-xs text-commonPink-200'>Interactive Theatre</p>
                                 </button>
@@ -23,30 +34,8 @@ const Plays = () => {
                         </div>
                         <div className='flex flex-wrap w-full lg:gap-3'>
                             <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-                            <div className='w-1/2 py-2 md:py-4 lg:w-56'>
-                                <Poster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEphbg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00319661-vsrrwpaely-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
-                            </div>
-
+                                <PlaysPoster src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCA2IEZlYg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00321689-jnhmnxksxn-portrait.jpg" alt="plays images" title="Mookajjaiya Kanasugalu" subtitle="Ranga Shankara: Bengaluru Kannada ₹150" />
+                            </div>                            
                         </div>
 
 
@@ -55,8 +44,7 @@ const Plays = () => {
                         <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 py-3'>Filters</h1>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} checkBox={true} />
-                            
+                            <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} checkBox={true} />                       
 
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative '>

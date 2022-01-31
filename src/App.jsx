@@ -5,6 +5,8 @@ import { Stream } from "./Pages/Stream.page";
 import Plays from "./Pages/Plays.page";
 import PlaysHOC from "./HOC/Plays.HOC";
 import axios from "axios";
+import PlaysSubPage from "./Pages/PlaysSub.page";
+import PlaysSubHOC from "./HOC/PlaysSub.HOC"
 
 // axios default settings
 axios.defaults.baseURL="https://api.themoviedb.org/3";
@@ -17,6 +19,7 @@ function App() {
       <DefaultHOC path="/" exact component={Homepage} />
       <StreamHOC path="/stream/:id" exact component={Stream} />
       <PlaysHOC path="/plays" exact component={Plays} />
+      <PlaysSubHOC path="/plays/sub" exact component={PlaysSubPage} />
     </>
   );
 }
