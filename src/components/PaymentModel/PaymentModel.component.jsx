@@ -32,7 +32,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price, title, subtitle
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
                     as="div"
-                    className="z-40 fixed inset-0 z-10 overflow-y-auto"
+                    className="z-40 fixed inset-0 overflow-y-auto"
                     onClose={closeModal}
                 >
                     <div className=" min-h-screen px-4 text-center">
