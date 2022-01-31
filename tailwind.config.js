@@ -25,7 +25,11 @@ module.exports = {
           100:'#f84464',
           200:'#df4d6c',
           300:'#fff9e3',//yellow
-          400:'#222539'
+          400:'#222539',//dark nav blue
+          500:'#313035',//footer dark black 
+          600:'#404043',//footer light black
+          700:'#7f7f7f',//footer small text 
+          800:'#4f4745', //footer large text
         },
       },
     },
