@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React,{useEffect,useContext} from 'react'
 import { useParams } from 'react-router-dom';
+import ExtendedNav from '../components/Navbar/Extended.Navbar';
 import StreamNavbar from '../components/Navbar/StreamNavbar.component';
 import {MovieContext} from "../context/movie.context"
 
@@ -18,6 +19,7 @@ const StreamLayout = (props) => {
     return (
         <div>
             <StreamNavbar />
+            <ExtendedNav />
         {props.children}
         </div>
     )
