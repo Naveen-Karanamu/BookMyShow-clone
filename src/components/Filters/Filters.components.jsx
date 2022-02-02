@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react'
 import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 
-const PlaysFilter = (props) => {
+const Filter = (props) => {
     const checkBox = (props) => {
         return (
             <>
@@ -48,7 +48,8 @@ const PlaysFilter = (props) => {
                 )
             }
         </Disclosure>
+        
     )
 }
 
-export default PlaysFilter;
+export default Filter;

@@ -3,16 +3,13 @@ import Footer from "../components/Footer/Footer";
 import ExtendedNav from "../components/Navbar/Extended.Navbar";
 import PlaysNavbar from "../components/Navbar/Plays.Navbar.component";
 
-
-const PlaysLayout=(props)=>{
-    return(
-        <>
-        <PlaysNavbar page="Plays" />
+const MoviesLayout = (props) => {
+    return (<>
+        <PlaysNavbar page="Now Showing" />
         <ExtendedNav />
         {props.children}
         <Footer />
-        </>
-    )
+    </>)
 }
 
-export default PlaysLayout;
+export default MoviesLayout;

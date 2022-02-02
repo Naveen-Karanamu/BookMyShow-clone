@@ -4,14 +4,14 @@ import { IoSearchOutline } from "react-icons/io5"
 import { VscMenu } from "react-icons/vsc"
 import { FaChevronDown } from "react-icons/fa"
 import Logo from "../../images/logo.image";
-const NavSm = () => {
+const NavSm = (props) => {
     return (
         <>
             <div className="flex items-center justify-between">
                 <div className="flex items-center pl-3">
                     <BsChevronLeft className="text-white w-6 h-6" />
                     <div className="px-4 py-2">
-                        <h1 className="text-2xl md:text-lg text-white">Plays</h1>
+                        <h1 className="text-xl md:text-lg text-white">{props.page}</h1>
                         <span className="text-gray-200 text-xs flex items-center">Rajamahendravaram (Rajahmundry)</span>
                     </div>
                 </div>
@@ -65,13 +65,13 @@ const NavXl = () => {
     )
 }
 
-const PlaysNavbar = () => {
+const PlaysNavbar = (props) => {
     return (
         <>
             <nav className="bg-navBarBMS-700 ">
-                <div className="md:hidden"><NavSm /></div>
+                <div className="md:hidden"><NavSm page={props.page}/></div>
 
-                <div className="hidden md:flex lg:hidden"><NavSm /></div>
+                <div className="hidden md:flex lg:hidden"><NavSm page={props.page}/></div>
 
                 <div className="hidden lg:flex xl:hidden"><NavLg /></div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import PlaysPoster from '../components/Poster/Plays.poster';
-import PlaysFilter from "../components/PlaysFilters/PlaysFilters.components"
+import Filter from "../components/Filters/Filters.components"
 import axios from 'axios';
 
 const Plays = () => {
@@ -13,6 +13,7 @@ const Plays = () => {
             setPlay(getPlay.data.results);
         }
         requestPlay();
+        console.log(play);
     },[])
    
 
@@ -46,28 +47,28 @@ const Plays = () => {
                         <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 py-3'>Filters</h1>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} checkBox={true} />
+                            <Filter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} checkBox={true} />
 
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative '>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Language" tags={["Kannada", "English", "Hindi", "Brajawali", "Bundelkhandi", "Marathi", "Urdu"]} />
+                            <Filter title="Language" tags={["Kannada", "English", "Hindi", "Brajawali", "Bundelkhandi", "Marathi", "Urdu"]} />
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Categories" tags={["Theatre", "Interative Theater"]} />
+                            <Filter title="Categories" tags={["Theatre", "Interative Theater"]} />
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Genres" tags={["Drama", "Comedy", "Suspense", "Thriller"]} />
+                            <Filter title="Genres" tags={["Drama", "Comedy", "Suspense", "Thriller"]} />
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="More Filters" tags={["Outdoor Events"]} />
+                            <Filter title="More Filters" tags={["Outdoor Events"]} />
                         </div>
                         <div className='w-full  px-3 py-2 my-2 bg-white rounded relative'>
                             <p className='absolute right-4 top-4 text-xs text-gray-500 font-medium'>Clear</p>
-                            <PlaysFilter title="Price" tags={["Free", "0-500", "501-2000", "Above 2000"]} />
+                            <Filter title="Price" tags={["Free", "0-500", "501-2000", "Above 2000"]} />
                         </div>
                         <div className='w-full py-1 my-2 border-commonPink-200  border rounded flex items-center justify-center'>
                             <p className='text-commonPink-200'>Browse by Venues</p>
