@@ -12,6 +12,7 @@ const ActivitiesPage = () => {
             setActivity(getActivity.data.results)
         }
         requestActivity();
+        console.log(activity);
     }, [])
 
     return (
@@ -19,7 +20,7 @@ const ActivitiesPage = () => {
             <div className='lg:container lg:mx-auto lg:px-32 '>
                 <div className=' lg:flex lg:flex-row-reverse lg:pt-14 gap-5'>
                     <div className=' w-3/4 mt-3'>
-                        <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Activities In Rajahmundry</h1>
+                        <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Activities In Vishakapatnam</h1>
                         <div className='flex flex-wrap gap-2 px-3 mb-4'>
                             <div>
                                 <button className='border py-2 bg-white px-3 rounded-3xl border-2 border-gray-300'>

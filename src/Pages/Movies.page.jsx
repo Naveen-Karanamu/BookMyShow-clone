@@ -23,7 +23,7 @@ const MoviesPage = () => {
                 <div className='lg:flex flex-col lg:pt-14 gap-5'>
 
                     <div className=' mt-3'>
-                        <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold  mb-6'>Plays In Rajahmundry</h1>
+                        <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold  mb-6'>Plays In Vishakapatnam</h1>
                         <div className='flex gap-2 pt-4 mb-4'>
                             <div className="">
                                 <button className='border py-2 bg-white px-3 rounded-3xl border-2 border-gray-300'>
@@ -79,7 +79,7 @@ const MoviesPage = () => {
         <div className='lg:container lg:mx-auto lg:px-32 '>
             <div className=' lg:flex lg:flex-row-reverse lg:pt-14 gap-5 '>
                 <div className=' w-3/4 mt-3 lg:pl-2'>
-                    <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Movies In Rajahmundry</h1>
+                    <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Movies In Vishakapatnam</h1>
                     <div className='flex gap-2 pt-4 mb-4'>
                         <div className="">
                             <button className='border py-2 bg-white px-3 rounded-3xl border-2 border-gray-300'>
