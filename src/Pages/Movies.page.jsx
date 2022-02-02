@@ -117,7 +117,7 @@ const MoviesPage = () => {
                     </div>
                     <div className=''>
                         <div className='flex flex-wrap py-2 md:py-4 lg:w-56' >
-                            {movies.map((image) => <PlaysPoster {...image} />)}
+                            {movies.map((image) => <PlaysPoster {...image} cat="Telugu" />)}
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ const PlaysPoster=(props)=>{
                 </div>
                 <h3 className={`text-md font-medium lg:text-lg lg:font-bold ${props.isDark ?"text-white" :"text-gray-700"}`}>{props.name}</h3>
                 <h3 className={`text-md font-medium lg:text-lg lg:font-bold ${props.isDark ?"text-white" :"text-gray-700"}`}>{props.title}</h3>
-                <p className={` text-xs lg:text-sm  ${props.isDark ?"text-white" :"text-gray-700"}`}>Telugu</p>
+                <p className={` text-xs lg:text-sm  ${props.isDark ?"text-white" :"text-gray-700"}`}>{props.cat}</p>
                 <p className={` text-xs lg:text-sm  ${props.isDark ?"text-white" :"text-gray-700"}`}>₹ 200</p>
             </div>
 
