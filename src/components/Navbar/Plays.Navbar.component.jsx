@@ -4,19 +4,19 @@ import { IoSearchOutline } from "react-icons/io5"
 import { VscMenu } from "react-icons/vsc"
 import { FaChevronDown } from "react-icons/fa"
 import Logo from "../../images/logo.image";
-const NavSm = (props) => {
+const NavSm = () => {
     return (
         <>
             <div className="flex items-center justify-between">
                 <div className="flex items-center pl-3">
                     <BsChevronLeft className="text-white w-6 h-6" />
                     <div className="px-4 py-2">
-                        <h1 className="text-xl md:text-lg text-white">{props.page}</h1>
-                        <span className="text-gray-200 text-xs flex items-center"> Vishakapatnam</span>
+                        <h1 className="text-2xl md:text-lg text-white">Plays</h1>
+                        <span className="text-gray-200 text-xs flex items-center">Vishakapatman</span>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-4 px-6 md:px-20">
+                <div className="flex items-center gap-4 px-6 md:pl-48">
                     <div className="text-white w-6 h-6 md:relative"><IoSearchOutline className="w-full h-full md:absolute md:left-96" /></div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const NavLg = () => {
                     <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" className="w-4/5 h-9 rounded-r border-0  border-none focus:outline-none" />
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
-                    <p className="text-white flex items-center gap-1"> Vishakapatnam <FaChevronDown className="w-3 h-3" /></p>
+                    <p className="text-white flex items-center gap-1">Vishakapatman <FaChevronDown className="w-3 h-3" /></p>
                     <button className="bg-red-500 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
@@ -56,7 +56,7 @@ const NavXl = () => {
                     <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" className="w-4/5 h-9 rounded-r border-0  border-none focus:outline-none" />
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
-                    <p className="text-white flex items-center gap-1"> Vishakapatnam <FaChevronDown className="w-3 h-3" /></p>
+                    <p className="text-white flex items-center gap-1">Vishakapatman <FaChevronDown className="w-3 h-3" /></p>
                     <button className="bg-commonPink-100 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
@@ -65,13 +65,13 @@ const NavXl = () => {
     )
 }
 
-const PlaysNavbar = (props) => {
+const PlaysNavbar = () => {
     return (
         <>
             <nav className="bg-navBarBMS-700 ">
-                <div className="md:hidden"><NavSm page={props.page}/></div>
+                <div className="md:hidden"><NavSm /></div>
 
-                <div className="hidden md:flex lg:hidden"><NavSm page={props.page}/></div>
+                <div className="hidden md:flex lg:hidden"><NavSm /></div>
 
                 <div className="hidden lg:flex xl:hidden"><NavLg /></div>
 

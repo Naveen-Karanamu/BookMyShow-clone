@@ -13,7 +13,6 @@ const Homepage = () => {
 
         };
         requestNowPlayingMovies();
-        // console.log(latestMovies);
     },[])
 
     const [topRatedMovies, setTopRatedMovies]=useState([]);
@@ -23,6 +22,8 @@ const Homepage = () => {
             setTopRatedMovies(getTopRatedMovies.data.results);
         }
         requestTopRatedMovies();
+        
+        console.log(topRatedMovies);
     },[])
 
     const [popularMovies, setPopularMovies]=useState([]);

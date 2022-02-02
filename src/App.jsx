@@ -15,6 +15,8 @@ import SportsHOC from "./HOC/Sports.HOC";
 import SportsPage from "./Pages/Sports.Pages";
 import ActivitiesHOC from "./HOC/Activities.HOC";
 import ActivitiesPage from "./Pages/Activities.page";
+import BuzzHOC from "./HOC/Buzz.HOC";
+import BuzzPage from "./Pages/Buzz.Page";
 
 // axios default settings
 axios.defaults.baseURL="https://api.themoviedb.org/3";
@@ -32,6 +34,7 @@ function App() {
       <EventsHOC path="/events" exact component={EventsPage} />
       <SportsHOC path="/sports" exact component={SportsPage} />
       <ActivitiesHOC path="/activities" exact component={ActivitiesPage} />
+      <BuzzHOC path="/buzz" exact component={BuzzPage} />
     </>
   );
 }
