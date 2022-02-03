@@ -12,13 +12,25 @@ const ExtendedNav = () => {
     return (<>
         <div className="hidden lg:flex bg-commonPink-400 h-10 items-center relative">
             <div className="flex  gap-4 text-gray-300 text-sm font-medium absolute left-36 ">
-                <p className="cursor-pointer hover:text-white focus:text-black">Movies</p>
-                <p className="cursor-pointer hover:text-white">Stream</p>
-                <p className="cursor-pointer hover:text-white">Events</p>
-                <p className="cursor-pointer hover:text-white">Plays</p>
-                <p className="cursor-pointer hover:text-white">Sports</p>
-                <p className="cursor-pointer hover:text-white">Activities</p>
-                <p className="cursor-pointer hover:text-white">Buzz</p>
+                <Link to="/movies">
+                    <p className="cursor-pointer hover:text-white focus:text-black">Movies</p>
+                </Link>
+                <Link to="/">
+                    <p className="cursor-pointer hover:text-white">Stream</p></Link>
+                <Link to="/events">
+                    <p className="cursor-pointer hover:text-white">Events</p>
+                </Link>
+                <Link to="/plays">
+                    <p className="cursor-pointer hover:text-white">Plays</p>
+                </Link>
+                <Link to="/sports">
+                    <p className="cursor-pointer hover:text-white">Sports</p>
+                </Link>
+                <Link to="/activities">
+                    <p className="cursor-pointer hover:text-white">Activities</p></Link>
+                <Link to="/buzz">
+                    <p className="cursor-pointer hover:text-white">Buzz</p>
+                </Link>
             </div>
             <div className="flex  gap-4 text-gray-300 text-sm font-medium absolute right-36">
                 <p className="cursor-pointer hover:text-white">ListYourShow</p>
