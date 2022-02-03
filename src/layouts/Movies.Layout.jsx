@@ -5,7 +5,7 @@ import PlaysNavbar from "../components/Navbar/Plays.Navbar.component";
 
 const MoviesLayout = (props) => {
     return (<>
-        <PlaysNavbar page="Now Showing" />
+        <PlaysNavbar page="Movies" />
         <ExtendedNav />
         {props.children}
         <Footer />

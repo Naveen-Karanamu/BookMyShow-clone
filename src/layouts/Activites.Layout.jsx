@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer"
 const ActivitiesLayout = (props) => {
     return (
         <>
-            <PlaysNav />
+            <PlaysNav page="Activities"/>
             <ExtendedNav />
             {props.children}
             <Footer />
