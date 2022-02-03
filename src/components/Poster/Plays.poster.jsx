@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const PlaysPoster=(props)=>{
     return(
-        <Link to={`/plays/sub`}>
+        <Link to={`/plays/sub/${props.id}`}>
             <div className="flex flex-col items-start  lg:gap-1 px-3 ">
                 <div>
                     <img src={`http://image.tmdb.org/t/p/original${props.poster_path}`} alt={props.original_title} className="w-full h-full rounded-lg"/>

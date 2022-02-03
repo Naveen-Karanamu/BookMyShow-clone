@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineCalendar, AiFillLike } from "react-icons/ai"
 import { IoLocationOutline } from "react-icons/io5"
 import { FaLanguage, FaFacebookF, FaTwitter } from "react-icons/fa"
 import { BiTime } from "react-icons/bi"
+import { MovieContext } from "../context/movie.context"
 
 const PlaysSubPageMd = () => {
+    const { movie } = useContext(MovieContext)
     return (<>
         <div >
-            <div className="w-full h-52 lg:h-full md:h-96">
-                <img src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-free-fire-solo-and-squad-bermuda-0-2020-12-8-t-13-48-37.jpg" className="w-full h-full" />
+            <div className="w-full h-56 lg:h-full md:h-96">
+                <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} className="w-full h-full" />
             </div>
             <div>
                 <div className="container mx-auto px-6 py-4">
                     <button className="text-white text-sm bg-navBarBMS-600 rounded-sm px-1">E SPORTS</button>
 
-                    <h1 className="text-2xl font-bold text-navBarBMS-700 py-2">Free Fire Solo And Squad (Bermuda)</h1>
+                    <h1 className="text-2xl font-bold text-navBarBMS-700 py-2">{movie.title}</h1>
 
                     <div className="flex gap-3 item-center">
                         <AiOutlineCalendar className="w-5 h-5 text-navBarBMS-400 " />
@@ -89,15 +91,17 @@ const PlaysSubPageMd = () => {
 }
 
 const PlaysSubPageLg = () => {
+    const { movie } = useContext(MovieContext)
+
     return (<>
         <div className="">
-            <div className="w-full h-52 lg:h-full md:h-96 lg:container lg:mx-auto lg:px-48 relative">
-                <img src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-free-fire-solo-and-squad-bermuda-0-2020-12-8-t-13-48-37.jpg" className="w-full h-full" />
+            <div className="w-full h-52 lg:h-96 md:h-96 lg:container lg:mx-auto lg:px-48 relative">
+                <img src={`http://image.tmdb.org/t/p/original${movie.backdrop_path}`} className="w-full " style={{ height: "calc(29vw)" }} />
 
                 <div className="bg-white p-4">
                     <div className="flex  items-center justify-between">
                         <div>
-                            <h1 className="text-2xl font-bold text-navBarBMS-800 ">Free Fire Solo And Squad (Bermuda)</h1>
+                            <h1 className="text-2xl font-bold text-navBarBMS-800 ">{movie.title}</h1>
                             <div className="flex flex-col gap-1">
                                 <h1>E Sports | English | 16yrs +</h1>
                             </div>
@@ -121,17 +125,17 @@ const PlaysSubPageLg = () => {
                     </div>
                 </div>
                 <div className="bg-white p-5 absolute mt-6 w-64">
-                        <h2 className="text-xl font-semibold text-navBarBMS-900 ">Share this event</h2>
-                        <div className="flex gap-4 mt-3">
-                            <FaFacebookF className="w-5 h-5  text-navBarBMS-600"/>
-                            <FaTwitter className="w-5 h-5  text-navBarBMS-600"/>
-                        </div>
+                    <h2 className="text-xl font-semibold text-navBarBMS-900 ">Share this event</h2>
+                    <div className="flex gap-4 mt-3">
+                        <FaFacebookF className="w-5 h-5  text-navBarBMS-600" />
+                        <FaTwitter className="w-5 h-5  text-navBarBMS-600" />
                     </div>
+                </div>
             </div>
             <div className="">
                 <div className="container mx-auto  py-6 " style={{ width: "calc(37vw" }}>
-                    
-                    <div className="bg-white p-4 mb-6">
+
+                    <div className="bg-white p-4 mb-6 mt-52">
                         <h1 className="text-lg font-medium pb-3">Click on Interested to stay updated about this event.</h1>
                         <div className="flex items-center justify-between">
                             <div className="flex flex-col">
@@ -175,7 +179,7 @@ const PlaysSubPageLg = () => {
 const PlaysSubPage = () => {
     return (<>
         <div className="lg:hidden"><PlaysSubPageMd /></div>
-        <div className="lg:block">< PlaysSubPageLg /></div>
+        <div className=" hidden lg:block">< PlaysSubPageLg /></div>
     </>)
 }
 

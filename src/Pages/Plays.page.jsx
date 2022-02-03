@@ -9,10 +9,11 @@ const Plays = () => {
     const [play, setPlay]=useState([]);
     useEffect(()=>{
         const requestPlay=async ()=>{
-            const getPlay=await axios.get("/trending/tv/week");
+            const getPlay=await axios.get("/movie/top_rated");
             setPlay(getPlay.data.results);
         }
         requestPlay();
+        
         console.log(play);
     },[])
    

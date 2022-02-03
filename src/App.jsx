@@ -29,7 +29,7 @@ function App() {
       <DefaultHOC path="/" exact component={Homepage} />
       <StreamHOC path="/stream/:id" exact component={Stream} />
       <PlaysHOC path="/plays" exact component={Plays} />
-      <PlaysSubHOC path="/plays/sub" exact component={PlaysSubPage} />
+      <PlaysSubHOC path="/plays/sub/:id" exact component={PlaysSubPage} />
       <MoviesHOC path="/movies" exanct component={MoviesPage} />
       <EventsHOC path="/events" exact component={EventsPage} />
       <SportsHOC path="/sports" exact component={SportsPage} />
