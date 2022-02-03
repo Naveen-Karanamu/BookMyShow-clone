@@ -4,6 +4,9 @@ import { IoLocationOutline } from "react-icons/io5"
 import { FaLanguage, FaFacebookF, FaTwitter } from "react-icons/fa"
 import { BiTime } from "react-icons/bi"
 import { MovieContext } from "../context/movie.context"
+import { GrNotes } from "react-icons/gr"
+import { CgNotes } from "react-icons/cg"
+import { BsChevronRight } from "react-icons/bs"
 
 const PlaysSubPageMd = () => {
     const { movie } = useContext(MovieContext)
@@ -71,9 +74,9 @@ const PlaysSubPageMd = () => {
                         <p className="text-navBarBMS-900 text-sm">Provide immediate relied and support to underserved comminitied affected by COVID-19.</p>
                         <span className="text-sm font-semibold text-commonPink-200">To Donate Now, Click Here.</span>
                     </div>
-                    <div className="pt-7">
+                    <div className="pt-7 ">
                         <h2 className="text-xl font-medium text-navBarBMS-700 ">About</h2>
-                        <h4 className="text-navBarBMS-800 text-md py-2">Succession of previous tournament offering a fair opportunity to earn Rs.</h4>
+                        <h4 className="text-navBarBMS-800 text-md py-2">{movie.overview}</h4>
                         <h4 className="text-navBarBMS-800 text-md py-2">Prized offered:-</h4>
                         <span className="text-sm font-normal text-commonPink-200">Read More</span>
                     </div>
@@ -131,9 +134,24 @@ const PlaysSubPageLg = () => {
                         <FaTwitter className="w-5 h-5  text-navBarBMS-600" />
                     </div>
                 </div>
+
+                <div className="bg-white p-4 absolute mt-6 w-64 right-48 ">
+                    <div className="bg-commonPink-300 flex gap-2 p-3 rounded items-center">
+                        <div className="text-commonPink-100">
+                            <CgNotes className="w-5 h-5" />
+                        </div>
+                        <p className="text-sm font-semibold text-navBarBMS-900">Contactless Ticketing & Fast-track Entry with M-ticket.
+                            <div className="text-commonPink-100 flex items-center">
+                                <span className="text-md font-semibold ">Learn How
+                                </span>
+                                <span ><BsChevronRight /></span>
+                            </div>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div className="">
-                <div className="container mx-auto  py-6 " style={{ width: "calc(37vw" }}>
+                <div className="container mx-auto  py-6 " style={{ width: "calc(38vw" }}>
 
                     <div className="bg-white p-4 mb-6 mt-52">
                         <h1 className="text-lg font-medium pb-3">Click on Interested to stay updated about this event.</h1>
@@ -159,9 +177,9 @@ const PlaysSubPageLg = () => {
                             <p className="text-navBarBMS-900 text-sm">Provide immediate relied and support to underserved comminitied affected by COVID-19.</p>
                             <span className="text-sm font-semibold text-commonPink-200">To Donate Now, Click Here.</span>
                         </div>
-                        <div className="pt-7">
+                        <div className="pt-7 md:block">
                             <h2 className="text-xl font-medium text-navBarBMS-700 ">About</h2>
-                            <h4 className="text-navBarBMS-800 text-md py-2">Succession of previous tournament offering a fair opportunity to earn Rs.</h4>
+                            <h4 className="text-navBarBMS-800 text-md py-2">{movie.overview}</h4>
                             <h4 className="text-navBarBMS-800 text-md py-2">Prized offered:-</h4>
                             <span className="text-sm font-normal text-commonPink-200">Read More</span>
                         </div>
