@@ -19,7 +19,7 @@ const ActivitiesPage = () => {
         <>
             <div className='lg:container lg:mx-auto lg:px-32 '>
                 <div className=' lg:flex lg:flex-row-reverse lg:pt-14 gap-5'>
-                    <div className=' w-3/4 mt-3'>
+                    <div className=' lg:w-3/4 mt-3'>
                         <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Activities In Vishakapatnam</h1>
                         <div className='flex flex-wrap gap-2 px-3 mb-4'>
                             <div>
@@ -73,7 +73,7 @@ const ActivitiesPage = () => {
 
                         </div>
                         <div className=''>
-                            <div className='flex flex-wrap py-2 md:py-4 lg:w-56' >
+                            <div className='flex flex-wrap py-2 md:py-4 justify-center' >
                                 {activity.map((image) => <PlaysPoster {...image} cat="Adventure" />)}
                             </div>
                         </div>
