@@ -6,7 +6,7 @@ import { BiTime } from "react-icons/bi"
 import { MovieContext } from "../context/movie.context"
 import { GrNotes } from "react-icons/gr"
 import { CgNotes } from "react-icons/cg"
-import { BsChevronRight } from "react-icons/bs"
+import { BsChevronRight,BsChevronUp } from "react-icons/bs"
 
 const PlaysSubPageMd = () => {
     const { movie } = useContext(MovieContext)
@@ -148,7 +148,18 @@ const PlaysSubPageLg = () => {
                             </div>
                         </p>
                     </div>
+                    <p className="text-md pt-12 font-semibold text-navBarBMS-900">Vishkapatnam</p>
+                    <div className="flex text-sm text-gray-700 items-center gap-2 pt-2">
+                        <p>Vuda Park: Vishakapatnam </p>
+                        <BsChevronUp/>
+                    </div>
+                    <p className="text-xs text-gray-500 pt-1">36/2, 8th Cross Road, R K Colony, 2nd Phase, J. P. Nagar, Vishakapatnam, Andra Pradesh, 560078, India</p>
+
+                    <div className="pt-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MbRrwlP4MtsSXkIG-XBxvCnAQi5NuzQpqQ&usqp=CAU" />
                 </div>
+                </div>
+                
             </div>
             <div className="">
                 <div className="container mx-auto  py-6 " style={{ width: "calc(38vw" }}>

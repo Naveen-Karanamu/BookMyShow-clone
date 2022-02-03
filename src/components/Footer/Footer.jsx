@@ -10,11 +10,17 @@ import { AiFillTwitterCircle } from "react-icons/ai"
 const Footer = () => {
     return (<>
         <div className="hidden lg:block pt-14">
-            <div className=" flex bg-white h-11 items-center justify-center ">
-                <p className="text-sm text-navBarBMS-600 font-normal">Thank You</p>
+            <div className=" flex flex-col bg-white   justify-start container mx-auto px-32 gap-4 py-4">
+                <p className="text-xs text-commonPink-800 font-semibold">Thank You</p>
+                <p className="text-xs text-commonPink-700">By using www.bookmyshow.com(our website), you are fully accepting the Privacy Policy available at
+                    <span className="text-commonPink-100"> https://bookmyshow.com/privacy </span>
+                    governing your access to Bookmyshow and provision of services by Bookmyshow to you. If you do not accept terms mentioned in the
+                    <span className="text-commonPink-100"> Privacy Policy </span>
+                    , you must not share any of your personal information and immediately exit Bookmyshow.
+                </p>
             </div>
 
-            <div className="bg-transparent h-8"></div>
+            {/* <div className="bg-transparent h-8"></div> */}
 
             <div className="flex bg-commonPink-500 h-20 items-center">
                 <div className="flex items-center container mx-auto px-32 justify-between">
