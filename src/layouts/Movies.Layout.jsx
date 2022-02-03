@@ -12,4 +12,4 @@ const MoviesLayout = (props) => {
     </>)
 }
 
-export default MoviesLayout;
+export default MoviesLayout;   
