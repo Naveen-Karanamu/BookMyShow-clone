@@ -12,8 +12,8 @@ const NavSm = (props) => {
                     <BsChevronLeft className="text-white w-6 h-6" />
                     <div className="px-4 py-2 md:py-4">
                         <h1 className="text-xl md:text-lg text-white md:hidden">{props.page}</h1>
-                        <span className="text-gray-200 text-xs flex items-center md:hidden">Vishakapatman</span>
-                        <span className="hidden md:block text-md text-white">{props.page} in Vishakapatman</span>
+                        <span className="text-gray-200 text-xs flex items-center md:hidden">Vishakapatnam</span>
+                        <span className="hidden md:block text-md text-white">{props.page} in Vishakapatnam</span>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@ const NavLg = () => {
                     <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" className="w-4/5 h-9 rounded-r border-0  border-none focus:outline-none" />
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
-                    <p className="text-white flex items-center gap-1">Vishakapatman <FaChevronDown className="w-3 h-3" /></p>
+                    <p className="text-white flex items-center gap-1">Vishakapatnam <FaChevronDown className="w-3 h-3" /></p>
                     <button className="bg-red-500 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
@@ -57,7 +57,7 @@ const NavXl = () => {
                     <input type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities" className=" h-9 rounded-r border-0  border-none focus:outline-none" style={{width:"650px"}} />
                 </div>
                 <div className="flex items-center w-full gap-6 justify-end">
-                    <p className="text-white flex items-center gap-1">Vishakapatman <FaChevronDown className="w-3 h-3" /></p>
+                    <p className="text-white flex items-center gap-1">Vishakapatnam <FaChevronDown className="w-3 h-3" /></p>
                     <button className="bg-commonPink-100 text-white px-4 py-1.5  rounded-md text-xs font-semibold">Sign In</button>
                     <VscMenu className="text-white w-5 h-5" />
                 </div>
