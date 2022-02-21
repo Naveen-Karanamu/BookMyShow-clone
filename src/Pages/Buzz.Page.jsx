@@ -27,8 +27,8 @@ const BuzzPage = () => {
 
     return (
         <>
-            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 ">
-                <div className="lg:flex lg:bg-white">
+            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 relative">
+                <div className="lg:flex lg:bg-white ">
                     <div className=" lg:p-8 lg:w-2/3 flex flex-col">
                         <div className="flex justify-evenly md:justify-around py-3 lg:py-0 gap-2 lg:gap-9 lg:pr-5 lg:pb-2">
                             <div className="flex flex-col items-center gap-2 w-24 h-24 md:w-28 md:h-28  lg:w lg:h ">
@@ -104,43 +104,45 @@ const BuzzPage = () => {
                     </div>
 
 
-                    <div className="hidden lg:block">
-                        <div className="border-2 p-4 m-7 -ml-7">
-                            <div className="border-b-2 pb-3 flex flex-col gap-2">
-                                <h3 className="font-semibold text-md">BookMyShow Buzz</h3>
-                                <p className="text-sm">Get the latest updates on movies, series, online events to stream and more with curated recommendtions.</p>
-                            </div>
-                            <div className="border-b-2 flex flex-col gap-2 pb-3">
-                                <h3 className="font-semibold text-md">Popular categories</h3>
-                                <p className="text-sm">Movies</p>
-                                <hr />
-                                <p className="text-sm">Events</p>
-                                <hr />
-                                <p className="text-sm">City Guide</p>
-                                <hr />
-                                <p className="text-sm">Sports</p>
-                                <hr />
-                                <p className="text-sm">Streaming</p>
-                                <hr />
-                                <p className="text-sm">Music</p>
-
-                            </div>
-                            <div className="border-b-2 pb-4 flex flex-col gap-2">
-                                <h3 className="font-semibold text-md">Get the app experience</h3>
-                                <div>
-                                    <img src="https://in.bmscdn.com/webin/common/google-play-badge.jpg" />
+                    <div className="w-1/3">
+                        <div className="hidden  lg:block sticky top-0">
+                            <div className="border-2 p-4 m-7 -ml-7">
+                                <div className="border-b-2 pb-3 flex flex-col gap-2">
+                                    <h3 className="font-semibold text-md">BookMyShow Buzz</h3>
+                                    <p className="text-sm">Get the latest updates on movies, series, online events to stream and more with curated recommendtions.</p>
                                 </div>
-                                <div>
-                                    <img src="https://in.bmscdn.com/static/2020/05/app-store-badge-1.jpg" />
-                                </div>
-                            </div>
+                                <div className="border-b-2 flex flex-col gap-2 pb-3">
+                                    <h3 className="font-semibold text-md">Popular categories</h3>
+                                    <p className="text-sm">Movies</p>
+                                    <hr />
+                                    <p className="text-sm">Events</p>
+                                    <hr />
+                                    <p className="text-sm">City Guide</p>
+                                    <hr />
+                                    <p className="text-sm">Sports</p>
+                                    <hr />
+                                    <p className="text-sm">Streaming</p>
+                                    <hr />
+                                    <p className="text-sm">Music</p>
 
-                            <div className="flex gap-4 items-center justify-evenly pt-3">
-                                <FaFacebookF className="w-5 h-5" />
-                                <AiFillInstagram className="w-6 h-6" />
-                                <AiFillYoutube className="w-6 h-6" />
-                                <AiOutlineTwitter className="w-6 h-6" />
-                                <BsLinkedin className="w-5 h-5" />
+                                </div>
+                                <div className="border-b-2 pb-4 flex flex-col gap-2">
+                                    <h3 className="font-semibold text-md">Get the app experience</h3>
+                                    <div>
+                                        <img src="https://in.bmscdn.com/webin/common/google-play-badge.jpg" />
+                                    </div>
+                                    <div>
+                                        <img src="https://in.bmscdn.com/static/2020/05/app-store-badge-1.jpg" />
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4 items-center justify-evenly pt-3">
+                                    <FaFacebookF className="w-5 h-5" />
+                                    <AiFillInstagram className="w-6 h-6" />
+                                    <AiFillYoutube className="w-6 h-6" />
+                                    <AiOutlineTwitter className="w-6 h-6" />
+                                    <BsLinkedin className="w-5 h-5" />
+                                </div>
                             </div>
                         </div>
                     </div>
