@@ -7,7 +7,7 @@ import Logo from "../../images/logo.image";
 const NavSm = (props) => {
     return (
         <>
-            <div className="flex items-center justify-between ">
+            <div className="flex items-center justify-between fixed top-0  z-10 w-full">
                 <div className="flex items-center pl-3">
                     <BsChevronLeft className="text-white w-6 h-6" />
                     <div className="px-4 py-2 md:py-4">
@@ -30,7 +30,7 @@ const NavSm = (props) => {
 const NavLg = () => {
     return (
         <>
-            <div className="h-16 flex items-center container mx-auto px-10 ">
+            <div className="h-16 flex items-center container mx-auto px-10 fixed top-0 bg-navBarBMS-700 z-10 w-full">
                 <div className=" flex items-center w-full">
                     <img className="bg-transparent h-12 pr-5" src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png" alt="logo" />
                     <div className="text-gray-500 bg-white h-9 rounded-l border-0 flex items-center px-3"><IoSearchOutline className="w-4 h-4 border-0 bg-transparent" /></div>
