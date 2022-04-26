@@ -1,4 +1,5 @@
 import Homepage from "./Pages/Homepage.page";
+// import DefaultHOC from "./HOC/Default.HOC";
 import DefaultHOC from "./HOC/Default.HOC";
 import StreamHOC from "./HOC/Stream.HOC";
 import { Stream } from "./Pages/Stream.page";
