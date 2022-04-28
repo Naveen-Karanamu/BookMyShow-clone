@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Plays from "../../Pages/Plays.page";
 
+
 const playsFunc = () => {
     return (<Link to={`/plays/`}>
         <Plays />
