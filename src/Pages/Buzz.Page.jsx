@@ -27,7 +27,7 @@ const BuzzPage = () => {
 
     return (
         <>
-            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 relative pt-7 md:pt-20 lg:pt-0">
+            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 relative pt-14 md:pt-20 lg:pt-0">
                 <div className="lg:flex lg:bg-white ">
                     <div className=" lg:p-8 lg:w-2/3 flex flex-col">
                         <div className="flex justify-evenly md:justify-around py-3 lg:py-0 gap-2 lg:gap-9 lg:pr-5 lg:pb-2">

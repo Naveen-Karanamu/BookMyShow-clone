@@ -120,7 +120,7 @@ export const Stream = () => {
     return (
         <>
             <StreamHero />
-            <div className='hidden lg:block w-3/5 mt-8 ml-36 pt-7 md:pt-20 lg:pt-0'>
+            <div className='hidden lg:block w-3/5 mt-8 ml-36 pt-14 md:pt-20 lg:pt-0'>
                 <h2 className='hidden lg:block text-2xl font-bold'>About the movie</h2>
                 <p className='py-4 text-md'>{movie.overview}</p>
                 <hr className='mt-4' />
