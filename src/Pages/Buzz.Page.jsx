@@ -27,7 +27,7 @@ const BuzzPage = () => {
 
     return (
         <>
-            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 relative pt-14 md:pt-20 lg:pt-0">
+            <div className="px-3 md:px-8 lg:continer lg:mx-auto lg:px-96 relative pt-14 md:pt-20 lg:pt-24">
                 <div className="lg:flex lg:bg-white ">
                     <div className=" lg:p-8 lg:w-2/3 flex flex-col">
                         <div className="flex justify-evenly md:justify-around py-3 lg:py-0 gap-2 lg:gap-9 lg:pr-5 lg:pb-2">
@@ -105,7 +105,7 @@ const BuzzPage = () => {
 
 
                     <div className="w-1/3">
-                        <div className="hidden  lg:block sticky top-0">
+                        <div className="hidden  lg:block sticky top-28">
                             <div className="border-2 p-4 m-7 -ml-7">
                                 <div className="border-b-2 pb-3 flex flex-col gap-2">
                                     <h3 className="font-semibold text-md">BookMyShow Buzz</h3>

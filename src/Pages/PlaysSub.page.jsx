@@ -12,7 +12,7 @@ const PlaysSubPageMd = () => {
     const { movie } = useContext(MovieContext)
     return (<>
         <div >
-            <div className="w-full h-56 lg:h-full md:h-96 pt-14 md:pt-20 lg:pt-0">
+            <div className="w-full h-56 lg:h-full md:h-96 pt-14 md:pt-20 lg:pt-8">
                 <img src={`http://image.tmdb.org/t/p/original${movie.poster_path}`} className="w-full h-full" />
             </div>
             <div>
