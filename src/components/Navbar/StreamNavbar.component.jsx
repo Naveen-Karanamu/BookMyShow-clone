@@ -9,10 +9,10 @@ import Logo from "../../images/logo.image";
 import { MovieContext } from "../../context/movie.context";
 const NavSm = () => {
     const { movie } = useContext(MovieContext)
-    return (
+    return (    
         <>
-            <div className="relative">
-                <div className="flex items-center justify-between h-14 sticky top-0  z-10 w-full">
+            <div className="">
+                <div className="flex items-center justify-between h-14 w-full">
                     <div className="px-4 py-2 flex items-center gap-6">
                         <span className="text-white "><BsChevronLeft className="w-4 h-4" /></span>
                         <h1 className="text-md font-semibold text-white">{movie.original_title}</h1>
@@ -79,8 +79,8 @@ const NavXl = () => {
 const StreamNavbar = () => {
     return (
         <>
-            <nav className="absolute inset-x-0 z-30  bg-opacity-10 backdrop-blur-lg lg:relative lg:bg-navBarBMS-700 ">
-                <div className="md:hidden relative"><NavSm /></div>
+            <nav className=" inset-x-0   bg-opacity-30 backdrop-blur-xl  lg:bg-navBarBMS-700 fixed top-0 w-full z-40">
+                <div className="md:hidden  "><NavSm /></div>
 
                 <div className="hidden md:block lg:hidden relative"><NavSm /></div>
 

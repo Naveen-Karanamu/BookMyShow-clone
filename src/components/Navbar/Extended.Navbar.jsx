@@ -11,7 +11,7 @@ const playsFunc = () => {
 
 const ExtendedNav = () => {
     return (<>
-        <div className="hidden lg:flex bg-commonPink-400 h-10 items-center relative">
+        <div className="hidden lg:flex bg-commonPink-400 h-10 items-center  sticky top-16 z-40">
             <div className="flex  gap-4 text-gray-300 text-sm font-medium absolute left-36 ">
                 <Link to="/movies">
                     <p className="cursor-pointer hover:text-white focus:text-black">Movies</p>
@@ -41,7 +41,7 @@ const ExtendedNav = () => {
             </div>
         </div>
 
-        <div className="hidden md:flex lg:hidden bg-commonPink-400 h-10 items-center md:h-8 md:fixed md:top-14 md:w-full md:z-10">
+        <div className="hidden md:flex lg:hidden bg-commonPink-400 h-10 items-center md:h-8 md:fixed md:top-14 md:w-full md:z-40">
             <div className="flex gap-4 text-gray-300 text-sm font-medium px-8">
                 <Link to="/movies">
                     <p className="cursor-pointer hover:text-white focus:text-black">Movies</p>

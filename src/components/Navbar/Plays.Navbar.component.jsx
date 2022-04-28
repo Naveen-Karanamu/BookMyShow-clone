@@ -69,7 +69,7 @@ const NavXl = () => {
 const PlaysNavbar = (props) => {
     return (
         <>
-            <nav className="bg-navBarBMS-700 ">
+            <nav className="bg-navBarBMS-700 fixed top-0 z-10 w-full">
                 <div className="md:hidden"><NavSm page={props.page} /></div>
 
                 <div className="hidden md:block lg:hidden "><NavSm page={props.page} /></div>
