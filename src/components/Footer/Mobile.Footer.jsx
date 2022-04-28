@@ -8,50 +8,76 @@ import { FaPlayCircle } from 'react-icons/fa'
 import { HiOutlineSpeakerphone } from 'react-icons/hi'
 import { FaRunning } from 'react-icons/fa'
 
+const tabs = (props) => {
+    return (
+        <>
+            <Link to={`/${props.route}`}>
+                {
+                    props.isActive ? props.icon : props.icon_in
+                }
+            </Link>
+        </>
+    )
+}
 
 const MobileFooter = () => {
     const location = useLocation();
     const currentPath = location.pathname;
-    // console.log(currentPath);
 
-    const tabs = [
+    const tab = [
         {
             title: "movies",
             route: "movies",
+            icon: <BiCameraMovie className="w-7 h-7 text-red-700" />,
+            icon_in: <BiCameraMovie className="w-7 h-7" />,
             isActive: currentPath.includes("movies")
         },
         {
-            title: "Order Online",
-            route: "order-online",
+            title: "stream",
+            route: "/",
+            icon: <BiMoviePlay className="w-7 h-7 text-red-700" />,
+            icon_in: <BiMoviePlay className="w-7 h-7" />,
             isActive: currentPath.includes("order-online")
         },
         {
             title: "events",
             route: "events",
+            icon: <BiCalendarEvent className="w-7 h-7 text-red-700" />,
+            icon_in: <BiCalendarEvent className="w-7 h-7" />,
             isActive: currentPath.includes("events")
         },
         {
             title: "plays",
             route: "plays",
+            icon: <FaPlayCircle className="w-7 h-7 text-red-700" />,
+            icon_in: <FaPlayCircle className="w-7 h-7" />,
             isActive: currentPath.includes("plays")
         },
         {
             title: "sports",
             route: "sports",
+            icon: <BiFootball className="w-7 h-7 text-red-700" />,
+            icon_in: <BiFootball className="w-7 h-7" />,
             isActive: currentPath.includes("sports")
         },
         {
             title: "activities",
             route: "activities",
+            icon: <FaRunning className="w-7 h-7 text-red-700" />,
+            icon_in: <FaRunning className="w-7 h-7" />,
             isActive: currentPath.includes("activities")
         },
         {
             title: "buzz",
             route: "buzz",
-            isActive: currentPath.includes("/buzz")
+            icon: <HiOutlineSpeakerphone className="w-7 h-7 text-red-700" />,
+            icon_in: <HiOutlineSpeakerphone className="w-7 h-7" />,
+            isActive: currentPath.includes("buzz")
         }
 
     ]
+    const { tabName } = useParams()
+    console.log(tabName);
 
     return (
         <>
@@ -73,10 +99,10 @@ const MobileFooter = () => {
                         <BiFootball className="w-7 h-7" />
                     </Link>
                     <Link to="/activities">
-                        <FaRunning className="w-7 h-7" />
+                        <FaRunning className="w-7 h-7 " />
                     </Link>
                     <Link to="/buzz">
-                        <HiOutlineSpeakerphone className={tabs.isActive?"w-7 h-7 bg-red-600":"w-7 h-7"} />
+                        <HiOutlineSpeakerphone className={tabs.isActive ? "w-7 h-7 text-red-600" : "w-7 h-7 "} />
                     </Link>
                 </div>
             </div>
