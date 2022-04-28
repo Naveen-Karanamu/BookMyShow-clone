@@ -7,7 +7,7 @@ import Logo from "../../images/logo.image";
 const NavSm = (props) => {
     return (
         <>
-            <div className="flex items-center justify-between fixed top-0  z-10 w-full">
+            <div className="flex items-center justify-between fixed top-0 bg-navBarBMS-700 z-10 w-full">
                 <div className="flex items-center pl-3">
                     <BsChevronLeft className="text-white w-6 h-6" />
                     <div className="px-4 py-2 md:py-4">
@@ -72,7 +72,7 @@ const PlaysNavbar = (props) => {
             <nav className="bg-navBarBMS-700 ">
                 <div className="md:hidden"><NavSm page={props.page} /></div>
 
-                <div className="hidden md:block lg:hidden"><NavSm page={props.page} /></div>
+                <div className="hidden md:block lg:hidden "><NavSm page={props.page} /></div>
 
                 <div className="hidden lg:flex xl:hidden"><NavLg /></div>
 
