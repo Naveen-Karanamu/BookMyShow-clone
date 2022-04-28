@@ -52,7 +52,7 @@ const HeroCarousel = () => {
 
     return (
         <>
-            <div className="lg:hidden lg:pt-0 pt-16">
+            <div className="lg:hidden lg:pt-0 md:pt-20 pt-16">
                 <HeroSlider {...settings}>
                     {images.map((image) => (
                         <div className=" h-48 md:w-full md:h-40">
@@ -65,7 +65,7 @@ const HeroCarousel = () => {
             <div className="hidden lg:block">
                 <HeroSlider {...settingsLg} >
                     {images.map((image) => (
-                        <div className="w-full h-96 -mb-16">
+                        <div className="w-full h-96 -mb-16"x>
                             <img src={`http://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full  py-2 px-1 rounded-xl" style={{ height: "85%" }} />
                         </div>
                     ))}

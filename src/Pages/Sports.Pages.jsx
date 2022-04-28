@@ -14,7 +14,7 @@ const SportsPage = () => {
     },[])
 
     return (<>
-        <div className='lg:container lg:mx-auto lg:px-32 '>
+        <div className='lg:container lg:mx-auto lg:px-32 pt-7 md:pt-20 lg:pt-0'>
             <div className=' lg:flex lg:flex-row-reverse lg:pt-14 gap-5'>
                 <div className=' lg:w-3/4 mt-3'>
                     <h1 className='hidden lg:flex text-2xl text-gray-800 font-bold pl-3 mb-6'>Sports In Vishakapatnam</h1>

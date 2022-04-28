@@ -82,7 +82,7 @@ const Homepage = () => {
    
     return (
         <>
-            <div className="lg:container lg:mx-auto lg:px-32 pt-7">
+            <div className="lg:container lg:mx-auto lg:px-32 pt-7 lg:pt-0">
                 <PosterSlider images={nowPlayingMovies} title="Recommended Movies" isDark={false} />
             </div>
             <div className="container mx-auto lg:px-32 my-14">
